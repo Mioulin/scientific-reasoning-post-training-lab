@@ -1,0 +1,98 @@
+{
+  "baseline": {
+    "n": 120,
+    "accuracy": 0.15833333333333333,
+    "format_valid_rate": 0.5083333333333333,
+    "numeric_accuracy": 0.0,
+    "numeric_mae_parseable_only": null,
+    "numeric_parseable_n": 0,
+    "numeric_n": 60,
+    "abstention_precision": 1.0,
+    "abstention_recall": 0.4583333333333333,
+    "unsupported_assertion_rate": 0.4666666666666667,
+    "by_family": {
+      "bayes": 0.0,
+      "causality": 0.0,
+      "decay": 0.0,
+      "difference": 0.0,
+      "evidence": 0.6666666666666666,
+      "extrapolation": 0.0,
+      "mean": 0.0,
+      "missing": 0.0,
+      "missing_variance": 0.9166666666666666,
+      "rate": 0.0
+    }
+  },
+  "sft": {
+    "n": 120,
+    "accuracy": 0.24166666666666667,
+    "format_valid_rate": 0.9333333333333333,
+    "numeric_accuracy": 0.0,
+    "numeric_mae_parseable_only": 20.00660127783208,
+    "numeric_parseable_n": 58,
+    "numeric_n": 60,
+    "abstention_precision": 0.9230769230769231,
+    "abstention_recall": 0.5,
+    "unsupported_assertion_rate": 0.2,
+    "by_family": {
+      "bayes": 0.0,
+      "causality": 0.4166666666666667,
+      "decay": 0.0,
+      "difference": 0.0,
+      "evidence": 0.5,
+      "extrapolation": 0.5,
+      "mean": 0.0,
+      "missing": 0.0,
+      "missing_variance": 1.0,
+      "rate": 0.0
+    }
+  },
+  "dpo": {
+    "n": 120,
+    "accuracy": 0.35,
+    "format_valid_rate": 0.925,
+    "numeric_accuracy": 0.0,
+    "numeric_mae_parseable_only": 23.8553553133468,
+    "numeric_parseable_n": 53,
+    "numeric_n": 60,
+    "abstention_precision": 0.8,
+    "abstention_recall": 0.5,
+    "unsupported_assertion_rate": 0.0,
+    "by_family": {
+      "bayes": 0.0,
+      "causality": 1.0,
+      "decay": 0.0,
+      "difference": 0.0,
+      "evidence": 0.5,
+      "extrapolation": 1.0,
+      "mean": 0.0,
+      "missing": 0.0,
+      "missing_variance": 1.0,
+      "rate": 0.0
+    }
+  },
+  "dpo_beta05": {
+    "n": 120,
+    "accuracy": 0.325,
+    "format_valid_rate": 0.9583333333333334,
+    "numeric_accuracy": 0.0,
+    "numeric_mae_parseable_only": 29.568905235906943,
+    "numeric_parseable_n": 57,
+    "numeric_n": 60,
+    "abstention_precision": 0.9,
+    "abstention_recall": 0.375,
+    "unsupported_assertion_rate": 0.0,
+    "by_family": {
+      "bayes": 0.0,
+      "causality": 1.0,
+      "decay": 0.0,
+      "difference": 0.0,
+      "evidence": 0.5,
+      "extrapolation": 1.0,
+      "mean": 0.0,
+      "missing": 0.0,
+      "missing_variance": 0.75,
+      "rate": 0.0
+    }
+  }
+}

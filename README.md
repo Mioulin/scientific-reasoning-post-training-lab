@@ -10,6 +10,30 @@ reliability. Results are measured from actual runs; pilot v1 is explicitly exclu
 See [progress](PROGRESS.md), [protocol](reports/preregistered_protocol.md),
 [data card](docs/data_card.md) and the research report for current execution status.
 
+## Measured results
+
+| Policy | Primary test (120) | Reserved final (120) |
+|---|---:|---:|
+| Baseline | 12.5% | 15.8% |
+| SFT | 40.8% | 24.2% |
+| SFT + DPO, beta .1 | 50.0% | 35.0% |
+| SFT + DPO, beta .5 | 50.0% | 32.5% |
+
+These are strict structured-answer accuracies. Numerical accuracy is only 10% for
+DPO on the primary split and 0% for all policies on final. Gains are concentrated in
+formatting and selected abstention/claim tasks; broad scientific reliability is not established.
+
+Reward preference accuracy: **86.7% primary / 87.5% final**. Yet rhetorical padding
+lets the incorrect answer win 81.7% of primary comparisons. On numerical pairs,
+accuracy drops from 83.3% to 61.7% when the direction of the synthetic error is reversed.
+The padding probe also breaks JSON format, so it does not isolate pure verbosity.
+
+![Measured test accuracy](reports/accuracy_test.png)
+
+See the [research report](reports/research_report.md), [reserved-split results](reports/results_final.md),
+[paired intervals](reports/comparisons_test.json) and [engineering notes](reports/engineering_notes.md).
+Local tests: **10 passed**. Remote GitHub Actions: **NOT RUN** before publication.
+
 ## Model and environment
 
 - `Qwen/Qwen2.5-0.5B-Instruct`, revision `7ae557604adf67be50417f59c2c2f167def9a775`, Apache-2.0.

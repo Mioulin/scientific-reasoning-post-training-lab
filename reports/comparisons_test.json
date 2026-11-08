@@ -1,0 +1,42 @@
+{
+  "sft": {
+    "delta": 0.2833333333333333,
+    "ci95": [
+      0.20833333333333334,
+      0.36666666666666664
+    ],
+    "method": "paired example bootstrap; does not capture template or training-seed uncertainty"
+  },
+  "dpo": {
+    "delta": 0.375,
+    "ci95": [
+      0.2916666666666667,
+      0.4583333333333333
+    ],
+    "method": "paired example bootstrap; does not capture template or training-seed uncertainty"
+  },
+  "dpo_beta05": {
+    "delta": 0.375,
+    "ci95": [
+      0.2916666666666667,
+      0.4583333333333333
+    ],
+    "method": "paired example bootstrap; does not capture template or training-seed uncertainty"
+  },
+  "dpo_minus_sft": {
+    "delta": 0.09166666666666666,
+    "ci95": [
+      0.03333333333333333,
+      0.15833333333333333
+    ],
+    "method": "paired example bootstrap; does not capture template or training-seed uncertainty"
+  },
+  "beta05_minus_beta01": {
+    "delta": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "method": "paired example bootstrap; does not capture template or training-seed uncertainty"
+  }
+}

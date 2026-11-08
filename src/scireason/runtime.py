@@ -76,6 +76,8 @@ def evaluate(name, adapter=None, split="test", limit=None):
     set_seed(42)
     model, tok, device = load(adapter)
     model.eval()
+    generation = json.loads(Path("configs/generation.json").read_text())
+    assert generation["pad_token_id"] == tok.pad_token_id
     data = read(split)
     if limit:
         data = data[:limit]
@@ -88,9 +90,7 @@ def evaluate(name, adapter=None, split="test", limit=None):
             text = tok.apply_chat_template(messages(row), tokenize=False, add_generation_prompt=True)
             inputs = tok(text, return_tensors="pt").to(device)
             with torch.inference_mode():
-                out = model.generate(
-                    **inputs, max_new_tokens=48, do_sample=False, pad_token_id=tok.pad_token_id
-                )
+                out = model.generate(**inputs, **generation)
             prediction = tok.decode(out[0, inputs.input_ids.shape[1] :], skip_special_tokens=True)
             result = {**row, "prediction": prediction, "grade": grade(prediction, row["answer"])}
             records.append(result)
@@ -108,7 +108,7 @@ def evaluate(name, adapter=None, split="test", limit=None):
             "split": split,
             "limit": limit,
             "seed": 42,
-            "generation": {"max_new_tokens": 48, "do_sample": False},
+            "generation": generation,
             "hardware": hardware(),
             "elapsed_seconds": time.perf_counter() - start,
             "memory": memory(),

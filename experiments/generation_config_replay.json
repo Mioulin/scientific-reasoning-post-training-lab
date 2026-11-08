@@ -1,0 +1,6 @@
+{
+  "status": "COMPLETED",
+  "example_id": "eaf03bde10eb12d3",
+  "prediction_equal": true,
+  "scope": "One baseline replay verifies explicit effective generation settings against the original inherited defaults; not a full bitwise reproducibility claim."
+}

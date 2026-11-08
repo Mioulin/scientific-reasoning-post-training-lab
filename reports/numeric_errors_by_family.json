@@ -1,0 +1,262 @@
+{
+  "test": {
+    "baseline": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      }
+    },
+    "sft": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 9,
+        "mae_parseable_only": 1.5256870123950454,
+        "accuracy": 0.16666666666666666
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 2,
+        "mae_parseable_only": 93.33333333333334,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 28.833333333333332,
+        "accuracy": 0.16666666666666666
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 11,
+        "mae_parseable_only": 0.3194085193840283,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 21.616666666666667,
+        "accuracy": 0.0
+      }
+    },
+    "dpo": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 10,
+        "mae_parseable_only": 0.6597618061349524,
+        "accuracy": 0.08333333333333333
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 27.166666666666668,
+        "accuracy": 0.4166666666666667
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 10,
+        "mae_parseable_only": 0.34148017132243114,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 20.145833333333332,
+        "accuracy": 0.0
+      }
+    },
+    "dpo_beta05": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 10,
+        "mae_parseable_only": 0.21419752431677055,
+        "accuracy": 0.08333333333333333
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 2,
+        "mae_parseable_only": 57.666666666666664,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 19.166666666666668,
+        "accuracy": 0.4166666666666667
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 10,
+        "mae_parseable_only": 0.34221937132243113,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 20.145833333333332,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "final": {
+    "baseline": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 0,
+        "mae_parseable_only": null,
+        "accuracy": 0.0
+      }
+    },
+    "sft": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 0.893939470993103,
+        "accuracy": 0.0
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 11,
+        "mae_parseable_only": 21.953030363636366,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 47,
+        "accuracy": 0.0
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 11,
+        "mae_parseable_only": 0.3902060420312402,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 28.323333333333334,
+        "accuracy": 0.0
+      }
+    },
+    "dpo": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 10,
+        "mae_parseable_only": 1.1940512217589658,
+        "accuracy": 0.0
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 9,
+        "mae_parseable_only": 22.32716048148148,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 59.333333333333336,
+        "accuracy": 0.0
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 10,
+        "mae_parseable_only": 0.3184431056457171,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 28.022037,
+        "accuracy": 0.0
+      }
+    },
+    "dpo_beta05": {
+      "rate": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 0.5439351733740554,
+        "accuracy": 0.0
+      },
+      "mean": {
+        "n": 12,
+        "parseable_n": 11,
+        "mae_parseable_only": 23.574747484848487,
+        "accuracy": 0.0
+      },
+      "difference": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 89.58333333333333,
+        "accuracy": 0.0
+      },
+      "bayes": {
+        "n": 12,
+        "parseable_n": 10,
+        "mae_parseable_only": 0.3078154032873741,
+        "accuracy": 0.0
+      },
+      "decay": {
+        "n": 12,
+        "parseable_n": 12,
+        "mae_parseable_only": 28.458333333333332,
+        "accuracy": 0.0
+      }
+    }
+  }
+}

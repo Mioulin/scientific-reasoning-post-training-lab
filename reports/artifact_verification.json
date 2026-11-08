@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETED",
+  "checked_predictions": [
+    "experiments/baseline_test.jsonl",
+    "experiments/sft_test.jsonl",
+    "experiments/dpo_test.jsonl",
+    "experiments/dpo_beta05_test.jsonl",
+    "experiments/reward_test.jsonl",
+    "experiments/baseline_final.jsonl",
+    "experiments/sft_final.jsonl",
+    "experiments/dpo_final.jsonl",
+    "experiments/dpo_beta05_final.jsonl",
+    "experiments/reward_final.jsonl"
+  ],
+  "checkpoints": {
+    "sft": {
+      "path": "checkpoints/sft/final/adapter_model.safetensors",
+      "sha256": "e15becdfb1fc468eacb2b9b55f9242b1ae31b94ddd1bc85a46cce1ac88c245f2",
+      "bytes": 2175168
+    },
+    "dpo": {
+      "path": "checkpoints/dpo/final/adapter_model.safetensors",
+      "sha256": "99b4371473af7da835343f65f84d5be12c85f9160a654b6b90890d1bfbbbc51c",
+      "bytes": 2175168
+    },
+    "dpo_beta05": {
+      "path": "checkpoints/dpo_beta05/final/adapter_model.safetensors",
+      "sha256": "2514a554962ee64c1131eda6430599a7e31b07fb65b5a4eecbb95cf9d4875455",
+      "bytes": 2175168
+    },
+    "reward": {
+      "path": "checkpoints/reward/final/adapter_model.safetensors",
+      "sha256": "a092aab906e4d5965e0c311d6fd72ccdc45bc2729a5c986de45d94a3844909cf",
+      "bytes": 2178848
+    }
+  }
+}

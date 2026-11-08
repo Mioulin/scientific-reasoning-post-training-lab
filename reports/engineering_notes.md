@@ -37,3 +37,7 @@
     are recorded. Bitwise equality across MPS/CUDA/CPU is not promised. Checkpoint
     recovery is integration-tested on a tiny CPU model; full-size checkpoints are
     saved and reloaded for inference.
+
+11. **PPO availability.** Inspection of the installed TRL 1.17.1 source tree found
+    no PPO implementation files. No legacy example was substituted. A separate
+    compatible implementation and stronger reward validation would be needed.

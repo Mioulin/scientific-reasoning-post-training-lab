@@ -1,0 +1,610 @@
+{
+  "baseline": [
+    {
+      "id": "eaf03bde10eb12d3",
+      "family": "rate",
+      "prompt": "The spike count is 15; observation duration is 155 seconds. Report count divided by duration.",
+      "answer": 0.0967741935483871,
+      "prediction": "{\"answer\": \"1\"}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "0b79c69596522584",
+      "family": "rate",
+      "prompt": "The spike count is 180; observation duration is 75 seconds. Report count divided by duration.",
+      "answer": 2.4,
+      "prediction": "{\"answer\": \"2.4\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "97c199606f612ea3",
+      "family": "rate",
+      "prompt": "The spike count is 106; observation duration is 101 seconds. Report count divided by duration.",
+      "answer": 1.0495049504950495,
+      "prediction": "{\"answer\": \"106\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "e96cfede6eb938c3",
+      "family": "rate",
+      "prompt": "The spike count is 135; observation duration is 88 seconds. Report count divided by duration.",
+      "answer": 1.5340909090909092,
+      "prediction": "{\"answer\": \"1.72\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "b77b17a2a5f599b5",
+      "family": "rate",
+      "prompt": "The spike count is 74; observation duration is 37 seconds. Report count divided by duration.",
+      "answer": 2.0,
+      "prediction": "{\"answer\": \"2\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "c1d27b4dc9dbacbf",
+      "family": "rate",
+      "prompt": "The spike count is 27; observation duration is 144 seconds. Report count divided by duration.",
+      "answer": 0.1875,
+      "prediction": "{\"answer\": \"2\"}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "2acf3b4b81bfb736",
+      "family": "rate",
+      "prompt": "The spike count is 128; observation duration is 117 seconds. Report count divided by duration.",
+      "answer": 1.0940170940170941,
+      "prediction": "{\"answer\": \"10.93\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "cf71a2cd8a0800a1",
+      "family": "rate",
+      "prompt": "The spike count is 158; observation duration is 102 seconds. Report count divided by duration.",
+      "answer": 1.5490196078431373,
+      "prediction": "{\"answer\": \"1.76\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "79a2ced48bb4835c",
+      "family": "rate",
+      "prompt": "The spike count is 13; observation duration is 78 seconds. Report count divided by duration.",
+      "answer": 0.16666666666666666,
+      "prediction": "{\"answer\": \"2\"}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "7d08a0f1e9de32b1",
+      "family": "rate",
+      "prompt": "The spike count is 73; observation duration is 130 seconds. Report count divided by duration.",
+      "answer": 0.5615384615384615,
+      "prediction": "{\"answer\": \"6.45\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    }
+  ],
+  "sft": [
+    {
+      "id": "eaf03bde10eb12d3",
+      "family": "rate",
+      "prompt": "The spike count is 15; observation duration is 155 seconds. Report count divided by duration.",
+      "answer": 0.0967741935483871,
+      "prediction": "{\"answer\":0.1,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.0032258064516129115,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "97c199606f612ea3",
+      "family": "rate",
+      "prompt": "The spike count is 106; observation duration is 101 seconds. Report count divided by duration.",
+      "answer": 1.0495049504950495,
+      "prediction": "{\"answer\":null,\"abstain\":true}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": true,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "abstention"
+      }
+    },
+    {
+      "id": "e96cfede6eb938c3",
+      "family": "rate",
+      "prompt": "The spike count is 135; observation duration is 88 seconds. Report count divided by duration.",
+      "answer": 1.5340909090909092,
+      "prediction": "{\"answer\":1.64,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.10590909090909073,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "c1d27b4dc9dbacbf",
+      "family": "rate",
+      "prompt": "The spike count is 27; observation duration is 144 seconds. Report count divided by duration.",
+      "answer": 0.1875,
+      "prediction": "{\"answer\":0.1938,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.0063,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "2acf3b4b81bfb736",
+      "family": "rate",
+      "prompt": "The spike count is 128; observation duration is 117 seconds. Report count divided by duration.",
+      "answer": 1.0940170940170941,
+      "prediction": "{\"answer\":null,\"abstain\":true}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": true,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "abstention"
+      }
+    },
+    {
+      "id": "cf71a2cd8a0800a1",
+      "family": "rate",
+      "prompt": "The spike count is 158; observation duration is 102 seconds. Report count divided by duration.",
+      "answer": 1.5490196078431373,
+      "prediction": "{\"answer\":null,\"abstain\":true}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": true,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "abstention"
+      }
+    },
+    {
+      "id": "79a2ced48bb4835c",
+      "family": "rate",
+      "prompt": "The spike count is 13; observation duration is 78 seconds. Report count divided by duration.",
+      "answer": 0.16666666666666666,
+      "prediction": "{\"answer\":1.5,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 1.3333333333333333,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "7d08a0f1e9de32b1",
+      "family": "rate",
+      "prompt": "The spike count is 73; observation duration is 130 seconds. Report count divided by duration.",
+      "answer": 0.5615384615384615,
+      "prediction": "{\"answer\":5.62,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 5.058461538461539,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "fe38284615849b58",
+      "family": "rate",
+      "prompt": "The spike count is 156; observation duration is 158 seconds. Report count divided by duration.",
+      "answer": 0.9873417721518988,
+      "prediction": "{\"answer\":0.97,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.017341772151898804,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "e7a9c07073bf5121",
+      "family": "rate",
+      "prompt": "The spike count is 96; observation duration is 121 seconds. Report count divided by duration.",
+      "answer": 0.7933884297520661,
+      "prediction": "{\"answer\":8,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 7.206611570247934,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    }
+  ],
+  "dpo": [
+    {
+      "id": "eaf03bde10eb12d3",
+      "family": "rate",
+      "prompt": "The spike count is 15; observation duration is 155 seconds. Report count divided by duration.",
+      "answer": 0.0967741935483871,
+      "prediction": "{\"answer\":0.1,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.0032258064516129115,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "0b79c69596522584",
+      "family": "rate",
+      "prompt": "The spike count is 180; observation duration is 75 seconds. Report count divided by duration.",
+      "answer": 2.4,
+      "prediction": "{\"answer\":1.4,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 1.0,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "97c199606f612ea3",
+      "family": "rate",
+      "prompt": "The spike count is 106; observation duration is 101 seconds. Report count divided by duration.",
+      "answer": 1.0495049504950495,
+      "prediction": "{\"answer\":null,\"abstain\":true}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": true,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "abstention"
+      }
+    },
+    {
+      "id": "e96cfede6eb938c3",
+      "family": "rate",
+      "prompt": "The spike count is 135; observation duration is 88 seconds. Report count divided by duration.",
+      "answer": 1.5340909090909092,
+      "prediction": "{\"answer\":0.1624,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 1.3716909090909093,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "b77b17a2a5f599b5",
+      "family": "rate",
+      "prompt": "The spike count is 74; observation duration is 37 seconds. Report count divided by duration.",
+      "answer": 2.0,
+      "prediction": "{\"answer\":0.2,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 1.8,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "c1d27b4dc9dbacbf",
+      "family": "rate",
+      "prompt": "The spike count is 27; observation duration is 144 seconds. Report count divided by duration.",
+      "answer": 0.1875,
+      "prediction": "{\"answer\":0.193586,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.006086000000000008,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "2acf3b4b81bfb736",
+      "family": "rate",
+      "prompt": "The spike count is 128; observation duration is 117 seconds. Report count divided by duration.",
+      "answer": 1.0940170940170941,
+      "prediction": "{\"answer\":0.105394,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.9886230940170941,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "cf71a2cd8a0800a1",
+      "family": "rate",
+      "prompt": "The spike count is 158; observation duration is 102 seconds. Report count divided by duration.",
+      "answer": 1.5490196078431373,
+      "prediction": "{\"answer\":1.4937,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.055319607843137275,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "79a2ced48bb4835c",
+      "family": "rate",
+      "prompt": "The spike count is 13; observation duration is 78 seconds. Report count divided by duration.",
+      "answer": 0.16666666666666666,
+      "prediction": "{\"answer\":1.524965,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 1.3582983333333332,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "fe38284615849b58",
+      "family": "rate",
+      "prompt": "The spike count is 156; observation duration is 158 seconds. Report count divided by duration.",
+      "answer": 0.9873417721518988,
+      "prediction": "{\"answer\":0.973429,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.013912772151898789,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    }
+  ],
+  "dpo_beta05": [
+    {
+      "id": "eaf03bde10eb12d3",
+      "family": "rate",
+      "prompt": "The spike count is 15; observation duration is 155 seconds. Report count divided by duration.",
+      "answer": 0.0967741935483871,
+      "prediction": "{\"answer\":0.1,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.0032258064516129115,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "0b79c69596522584",
+      "family": "rate",
+      "prompt": "The spike count is 180; observation duration is 75 seconds. Report count divided by duration.",
+      "answer": 2.4,
+      "prediction": "{\"answer\":2.0,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.3999999999999999,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "97c199606f612ea3",
+      "family": "rate",
+      "prompt": "The spike count is 106; observation duration is 101 seconds. Report count divided by duration.",
+      "answer": 1.0495049504950495,
+      "prediction": "{\"answer\":null,\"abstain\":true}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": true,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "abstention"
+      }
+    },
+    {
+      "id": "e96cfede6eb938c3",
+      "family": "rate",
+      "prompt": "The spike count is 135; observation duration is 88 seconds. Report count divided by duration.",
+      "answer": 1.5340909090909092,
+      "prediction": "{\"answer\":1.64,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.10590909090909073,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "b77b17a2a5f599b5",
+      "family": "rate",
+      "prompt": "The spike count is 74; observation duration is 37 seconds. Report count divided by duration.",
+      "answer": 2.0,
+      "prediction": "{\"answer\":1.925865,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.07413500000000006,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "c1d27b4dc9dbacbf",
+      "family": "rate",
+      "prompt": "The spike count is 27; observation duration is 144 seconds. Report count divided by duration.",
+      "answer": 0.1875,
+      "prediction": "{\"answer\":0.1938,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.0063,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "2acf3b4b81bfb736",
+      "family": "rate",
+      "prompt": "The spike count is 128; observation duration is 117 seconds. Report count divided by duration.",
+      "answer": 1.0940170940170941,
+      "prediction": "{\"answer\":0.99,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.10401709401709414,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "cf71a2cd8a0800a1",
+      "family": "rate",
+      "prompt": "The spike count is 158; observation duration is 102 seconds. Report count divided by duration.",
+      "answer": 1.5490196078431373,
+      "prediction": "{\"answer\":1.473333,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.0756866078431373,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "79a2ced48bb4835c",
+      "family": "rate",
+      "prompt": "The spike count is 13; observation duration is 78 seconds. Report count divided by duration.",
+      "answer": 0.16666666666666666,
+      "prediction": "{\"answer\":1.524965,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 1.3582983333333332,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "fe38284615849b58",
+      "family": "rate",
+      "prompt": "The spike count is 156; observation duration is 158 seconds. Report count divided by duration.",
+      "answer": 0.9873417721518988,
+      "prediction": "{\"answer\":0.9734,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.013941772151898735,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    }
+  ]
+}

@@ -46,3 +46,10 @@ All primary runs are repeated under v2; this change was not based on outcome opt
 Before RM training: add semantics-preserving JSON indentation probes and opposite-sign
 numerical corruptions (training rejected numbers are always increased). These assess
 format sensitivity and a directional numeric shortcut. Report them as secondary probes.
+
+Generation metadata clarification after execution: the pinned Qwen generation config
+inherits repetition_penalty=1.1 and eos_token_id=[151645,151643]. The inference code
+overrides pad_token_id with tokenizer.eos_token_id=151645, do_sample=false and
+max_new_tokens=48. All policies used these same settings. configs/generation.json
+records their effective values, including the default num_beams=1. Sampling-only
+temperature/top-p/top-k do not affect greedy decoding.

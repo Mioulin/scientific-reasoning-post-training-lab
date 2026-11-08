@@ -1,6 +1,7 @@
 """Write the report exclusively from completed run artefacts."""
 
 import json
+import re
 from pathlib import Path
 
 
@@ -36,6 +37,10 @@ report = [
     "\n![Primary accuracy](accuracy_test.png)\n\n![Family results](families_test.png)",
     "\n## Interpretation and uncertainty",
 ]
+report.append(
+    "The main improvement is in structured responses and selected abstention/claim tasks. Numerical accuracy remains only 10% for DPO on the primary split and is 0% for every policy on the reserved final split under the strict metric. The lower final scores demonstrate fragile transfer to new wording/instances. These results do not support robust numerical scientific reliability."
+)
+
 for name, comp in comparisons.items():
     lo, hi = comp["ci95"]
     report.append(
@@ -74,13 +79,16 @@ report.append(
 )
 for name, m in metrics.items():
     mae = m["numeric_mae_parseable_only"]
+    mae_text = f"{mae:.3f}" if mae is not None else "undefined"
+    precision = m["abstention_precision"]
+    precision_text = f"{precision:.3f}" if precision is not None else "undefined"
     report.append(
-        f"| {name} | {m['abstention_precision']} | {m['abstention_recall']:.3f} | "
-        f"{m['unsupported_assertion_rate']:.3f} | {mae if mae is not None else 'undefined'} | "
+        f"| {name} | {precision_text} | {m['abstention_recall']:.3f} | "
+        f"{m['unsupported_assertion_rate']:.3f} | {mae_text} | "
         f"{m['numeric_parseable_n']}/{m['numeric_n']} |"
     )
 report.append(
-    "False support is measured only where the supplied claim is unsupported. It is not an open-ended "
+    "Pooled numerical MAE mixes task units and is only a descriptive diagnostic; consult numeric_errors_by_family.json for separate scales and coverage. False support is measured only where the supplied claim is unsupported. It is not an open-ended "
     "hallucination rate. Unparseable answers remain primary failures even if they cannot be categorised "
     "as explicit false support. No model confidence probability or calibration score is elicited."
 )
@@ -113,6 +121,11 @@ report.append(
     "are fixed probes, not an adaptive adversarial search. No policy was optimised against this reward, "
     "and preference accuracy is not objective scientific truth."
 )
+numeric_reward_rows = [r for r in records("reward") if type(r["answer"]) in (int, float)]
+report.append(
+    f"On the same {len(numeric_reward_rows)} numerical pairs, original-corruption accuracy is {sum(r['correct'] for r in numeric_reward_rows) / len(numeric_reward_rows):.1%}; this is the appropriate comparator for the opposite-direction probe."
+)
+
 report.append("\n## Methods and reproducibility")
 report.append(
     "Model: `Qwen/Qwen2.5-0.5B-Instruct`, revision "
@@ -120,7 +133,7 @@ report.append(
     "this project does not study pretraining. Data: `scireason-synthetic-v2`, original procedural CC0 "
     "problems. Exact split hashes are in `experiments/dataset_manifest.json`. All preferences are "
     "programmatic oracle labels, not human annotations. Models use the same greedy decoding, 48 new "
-    "tokens, seed 42 and chat template. No inference-time answer constraints are imposed."
+    "tokens, seed 42 and chat template. The inherited repetition penalty is 1.1; EOS IDs are 151645/151643, with pad ID 151645 and one beam (configs/generation.json). No inference-time answer constraints are imposed."
 )
 report.append(
     "Hardware: Apple M4 Pro, 12 CPU/16 GPU cores, 24 GB unified memory, macOS 15.7.4. "
@@ -197,7 +210,7 @@ report.append(
 )
 report.append(
     "PPO status: **NOT RUN**. The blocker is scientific scope and an unvalidated online reward signal, "
-    "not a demonstrated hardware impossibility. A defensible extension needs a compatible maintained "
+    "not a demonstrated hardware impossibility. The installed TRL 1.17.1 package contains no PPO implementation files; legacy PPO examples cannot simply be used with this stack. A defensible extension needs a separately verified compatible maintained "
     "online trainer, rollout/old/reference policies, value/advantage validation, KL diagnostics, a "
     "stronger reward model and separate compute budget. No GRPO substitute is claimed."
 )
@@ -215,7 +228,9 @@ report.append(
     "[Alignment Handbook](https://github.com/huggingface/alignment-handbook), "
     "[DPO](https://arxiv.org/abs/2305.18290), [LoRA](https://arxiv.org/abs/2106.09685)."
 )
-Path("reports/research_report.md").write_text("\n\n".join(report) + "\n")
+report_text = "\n\n".join(report) + "\n"
+report_text = re.sub(r"(?m)(^\|.*\|)\n\n(?=\|)", r"\1\n", report_text)
+Path("reports/research_report.md").write_text(report_text)
 Path("reports/results_summary.md").write_text(
     "# Measured results\n\n"
     + Path("reports/results_test.md").read_text()

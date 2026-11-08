@@ -1,0 +1,113 @@
+{
+  "sft": [
+    {
+      "id": "fb76ff5cec9069c6",
+      "family": "evidence",
+      "prompt": "Only the sample average 138 is reported. Is \"the sample average is above 137\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "1fad74663cd3096d",
+      "family": "evidence",
+      "prompt": "Only the sample average 36 is reported. Is \"the sample average is above 35\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "d58495b230fbdc35",
+      "family": "evidence",
+      "prompt": "Only the sample average 150 is reported. Is \"the sample average is above 149\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "094780297b340e94",
+      "family": "evidence",
+      "prompt": "Only the sample average 121 is reported. Is \"the sample average is above 120\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    }
+  ],
+  "dpo": [
+    {
+      "id": "fb76ff5cec9069c6",
+      "family": "evidence",
+      "prompt": "Only the sample average 138 is reported. Is \"the sample average is above 137\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "1fad74663cd3096d",
+      "family": "evidence",
+      "prompt": "Only the sample average 36 is reported. Is \"the sample average is above 35\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "d58495b230fbdc35",
+      "family": "evidence",
+      "prompt": "Only the sample average 150 is reported. Is \"the sample average is above 149\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "094780297b340e94",
+      "family": "evidence",
+      "prompt": "Only the sample average 121 is reported. Is \"the sample average is above 120\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    }
+  ],
+  "dpo_beta05": [
+    {
+      "id": "fb76ff5cec9069c6",
+      "family": "evidence",
+      "prompt": "Only the sample average 138 is reported. Is \"the sample average is above 137\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "1fad74663cd3096d",
+      "family": "evidence",
+      "prompt": "Only the sample average 36 is reported. Is \"the sample average is above 35\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "d58495b230fbdc35",
+      "family": "evidence",
+      "prompt": "Only the sample average 150 is reported. Is \"the sample average is above 149\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "094780297b340e94",
+      "family": "evidence",
+      "prompt": "Only the sample average 121 is reported. Is \"the sample average is above 120\" supported?",
+      "baseline": "{\"answer\": \"supported\", \"abstain\": false}",
+      "trained": "{\"answer\":\"unsupported\",\"abstain\":false}"
+    },
+    {
+      "id": "e2b16238cdfb0beb",
+      "family": "missing_variance",
+      "prompt": "A sample has size 168 and mean 65. No dispersion information is supplied. What is its numerical standard deviation?",
+      "baseline": "{\"answer\":null,\"abstain\":true}",
+      "trained": "{\"answer\":0.429739,\"abstain\":false}"
+    },
+    {
+      "id": "bcd4e293515f64b2",
+      "family": "missing_variance",
+      "prompt": "A sample has size 26 and mean 187. No dispersion information is supplied. What is its numerical standard deviation?",
+      "baseline": "{\"answer\":null,\"abstain\":true}",
+      "trained": "{\"answer\":0.534936,\"abstain\":false}"
+    },
+    {
+      "id": "bcfe0d056af55a56",
+      "family": "missing_variance",
+      "prompt": "A sample has size 153 and mean 98. No dispersion information is supplied. What is its numerical standard deviation?",
+      "baseline": "{\"answer\":null,\"abstain\":true}",
+      "trained": "{\"answer\":0.274693,\"abstain\":false}"
+    }
+  ]
+}

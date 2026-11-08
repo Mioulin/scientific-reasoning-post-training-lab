@@ -6,6 +6,20 @@
     "accuracy": 0.03333333333333333,
     "status": "Post-hoc format sensitivity diagnostic; not the preregistered primary endpoint."
   },
+  "dpo_beta05_test": {
+    "numeric_n": 60,
+    "parseable_numeric_or_string": 46,
+    "correct_after_numeric_string_conversion": 6,
+    "accuracy": 0.1,
+    "status": "Post-hoc format sensitivity diagnostic; not the preregistered primary endpoint."
+  },
+  "dpo_test": {
+    "numeric_n": 60,
+    "parseable_numeric_or_string": 44,
+    "correct_after_numeric_string_conversion": 6,
+    "accuracy": 0.1,
+    "status": "Post-hoc format sensitivity diagnostic; not the preregistered primary endpoint."
+  },
   "sft_test": {
     "numeric_n": 60,
     "parseable_numeric_or_string": 46,

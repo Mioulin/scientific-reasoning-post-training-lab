@@ -1,5 +1,8 @@
 import json
+import os
 from pathlib import Path
+
+os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
 
 import matplotlib
 import numpy as np

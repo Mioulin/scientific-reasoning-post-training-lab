@@ -1,0 +1,126 @@
+{
+  "status": "COMPLETED",
+  "dataset_manifest": {
+    "version": "scireason-synthetic-v2",
+    "seed": 1729,
+    "license": "CC0-1.0",
+    "splits": {
+      "train": {
+        "n": 288,
+        "sha256": "d75e47da809fe429c95b5660a58a1933ed4eabaef592750b1af5b94471a5cab4",
+        "families": [
+          "rate",
+          "mean",
+          "difference",
+          "missing",
+          "causality",
+          "evidence"
+        ]
+      },
+      "validation": {
+        "n": 48,
+        "sha256": "4c130721499e55667311a37ba9a6a75062fd1bdf9c61c92f0e874de6cd7b3f34",
+        "families": [
+          "rate",
+          "mean",
+          "difference",
+          "missing",
+          "causality",
+          "evidence"
+        ]
+      },
+      "test": {
+        "n": 120,
+        "sha256": "79aeede60f9dbba93ca7a7e8f5388f89468895b4a07a863cbfa8778d69a06c6f",
+        "families": [
+          "rate",
+          "mean",
+          "difference",
+          "missing",
+          "causality",
+          "evidence",
+          "bayes",
+          "decay",
+          "missing_variance",
+          "extrapolation"
+        ]
+      },
+      "final": {
+        "n": 120,
+        "sha256": "45dbb3c8346ec212bffb2b9dd1f170e3970c246b76fecf550b8fcb44ed5ffe26",
+        "families": [
+          "rate",
+          "mean",
+          "difference",
+          "missing",
+          "causality",
+          "evidence",
+          "bayes",
+          "decay",
+          "missing_variance",
+          "extrapolation"
+        ]
+      }
+    }
+  },
+  "model": {
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "license": "Apache-2.0",
+    "cache_dir": ".cache/huggingface"
+  },
+  "adapter": "checkpoints/dpo/final",
+  "split": "final",
+  "limit": null,
+  "seed": 42,
+  "generation": {
+    "max_new_tokens": 48,
+    "do_sample": false
+  },
+  "hardware": {
+    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.13",
+    "machine": "arm64",
+    "mps_available": true,
+    "cuda_available": false,
+    "packages": {
+      "torch": "2.15.0",
+      "transformers": "5.22.2",
+      "trl": "1.17.1",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "elapsed_seconds": 22.33498054201482,
+  "memory": {
+    "process_max_rss_bytes": 3445243904,
+    "mps_allocated_bytes": 2015718400,
+    "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+  },
+  "metrics": {
+    "n": 120,
+    "accuracy": 0.35,
+    "format_valid_rate": 0.925,
+    "numeric_accuracy": 0.0,
+    "numeric_mae_parseable_only": 23.8553553133468,
+    "numeric_parseable_n": 53,
+    "numeric_n": 60,
+    "abstention_precision": 0.8,
+    "abstention_recall": 0.5,
+    "unsupported_assertion_rate": 0.0,
+    "by_family": {
+      "bayes": 0.0,
+      "causality": 1.0,
+      "decay": 0.0,
+      "difference": 0.0,
+      "evidence": 0.5,
+      "extrapolation": 1.0,
+      "mean": 0.0,
+      "missing": 0.0,
+      "missing_variance": 1.0,
+      "rate": 0.0
+    }
+  }
+}

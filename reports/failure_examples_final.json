@@ -1,0 +1,610 @@
+{
+  "baseline": [
+    {
+      "id": "6269727a67ab0cfb",
+      "family": "rate",
+      "prompt": "Over an interval of 108 seconds, 161 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.4907407407407407,
+      "prediction": "{\"answer\": \"161/108 = 1.572222... Hz\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "5ca4f84f7e8aaa85",
+      "family": "rate",
+      "prompt": "Over an interval of 32 seconds, 86 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 2.6875,
+      "prediction": "{\"answer\": \"1.5\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "dbf48ff4ac874541",
+      "family": "rate",
+      "prompt": "Over an interval of 81 seconds, 155 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.9135802469135803,
+      "prediction": "{\"answer\": \"1.72\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "8881cd1f68ee041b",
+      "family": "rate",
+      "prompt": "Over an interval of 43 seconds, 43 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.0,
+      "prediction": "{\"answer\": \"10\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "4181993a9094b951",
+      "family": "rate",
+      "prompt": "Over an interval of 49 seconds, 171 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 3.489795918367347,
+      "prediction": "{\"answer\": \"30\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "bd0946c11e311972",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 128 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.7314285714285714,
+      "prediction": "{\"answer\": \"6.4\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "3f3e38eea1e72092",
+      "family": "rate",
+      "prompt": "Over an interval of 80 seconds, 146 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.825,
+      "prediction": "{\"answer\": \"1.75\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "bbeb9e5528285aaf",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 83 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.4742857142857143,
+      "prediction": "{\"answer\": \"6.0\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "89f008798628fba5",
+      "family": "rate",
+      "prompt": "Over an interval of 131 seconds, 63 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.48091603053435117,
+      "prediction": "{\"answer\": \"63 Hz\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "95957e05bd5b5c3d",
+      "family": "rate",
+      "prompt": "Over an interval of 39 seconds, 173 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 4.435897435897436,
+      "prediction": "{\"answer\": \"6.05\", \"abstain\": false}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    }
+  ],
+  "sft": [
+    {
+      "id": "6269727a67ab0cfb",
+      "family": "rate",
+      "prompt": "Over an interval of 108 seconds, 161 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.4907407407407407,
+      "prediction": "{\"answer\":1.42,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.07074074074074077,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "5ca4f84f7e8aaa85",
+      "family": "rate",
+      "prompt": "Over an interval of 32 seconds, 86 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 2.6875,
+      "prediction": "{\"answer\":2.9,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.2124999999999999,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "dbf48ff4ac874541",
+      "family": "rate",
+      "prompt": "Over an interval of 81 seconds, 155 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.9135802469135803,
+      "prediction": "{\"answer\":1.72,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.19358024691358033,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "8881cd1f68ee041b",
+      "family": "rate",
+      "prompt": "Over an interval of 43 seconds, 43 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.0,
+      "prediction": "{\"answer\":0.1,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.9,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "4181993a9094b951",
+      "family": "rate",
+      "prompt": "Over an interval of 49 seconds, 171 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 3.489795918367347,
+      "prediction": "{\"answer\":3.5,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.010204081632652962,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "bd0946c11e311972",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 128 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.7314285714285714,
+      "prediction": "{\"answer\":0.69,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.04142857142857148,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "3f3e38eea1e72092",
+      "family": "rate",
+      "prompt": "Over an interval of 80 seconds, 146 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.825,
+      "prediction": "{\"answer\":1.725,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.09999999999999987,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "bbeb9e5528285aaf",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 83 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.4742857142857143,
+      "prediction": "{\"answer\":4.6,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 4.1257142857142854,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "89f008798628fba5",
+      "family": "rate",
+      "prompt": "Over an interval of 131 seconds, 63 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.48091603053435117,
+      "prediction": "{\"answer\":4.85,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 4.369083969465649,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "95957e05bd5b5c3d",
+      "family": "rate",
+      "prompt": "Over an interval of 39 seconds, 173 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 4.435897435897436,
+      "prediction": "{\"answer\":5.08,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.644102564102564,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    }
+  ],
+  "dpo": [
+    {
+      "id": "6269727a67ab0cfb",
+      "family": "rate",
+      "prompt": "Over an interval of 108 seconds, 161 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.4907407407407407,
+      "prediction": "{\"answer\":1.42,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.07074074074074077,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "5ca4f84f7e8aaa85",
+      "family": "rate",
+      "prompt": "Over an interval of 32 seconds, 86 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 2.6875,
+      "prediction": "{\"answer\":2.8125,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.125,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "dbf48ff4ac874541",
+      "family": "rate",
+      "prompt": "Over an interval of 81 seconds, 155 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.9135802469135803,
+      "prediction": "{\"answer\":1.729639,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.18394124691358038,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "8881cd1f68ee041b",
+      "family": "rate",
+      "prompt": "Over an interval of 43 seconds, 43 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.0,
+      "prediction": "{\"answer\":0.1}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "4181993a9094b951",
+      "family": "rate",
+      "prompt": "Over an interval of 49 seconds, 171 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 3.489795918367347,
+      "prediction": "{\"answer\":0.356863,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 3.132932918367347,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "bd0946c11e311972",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 128 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.7314285714285714,
+      "prediction": "{\"answer\":0.693,null}",
+      "grade": {
+        "correct": false,
+        "format_valid": false,
+        "abstained": false,
+        "absolute_error": null,
+        "unsupported_assertion": false,
+        "error": "format"
+      }
+    },
+    {
+      "id": "3f3e38eea1e72092",
+      "family": "rate",
+      "prompt": "Over an interval of 80 seconds, 146 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.825,
+      "prediction": "{\"answer\":1.725,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.09999999999999987,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "bbeb9e5528285aaf",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 83 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.4742857142857143,
+      "prediction": "{\"answer\":0.469231,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.005054714285714301,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "89f008798628fba5",
+      "family": "rate",
+      "prompt": "Over an interval of 131 seconds, 63 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.48091603053435117,
+      "prediction": "{\"answer\":4.78,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 4.299083969465649,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "95957e05bd5b5c3d",
+      "family": "rate",
+      "prompt": "Over an interval of 39 seconds, 173 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 4.435897435897436,
+      "prediction": "{\"answer\":0.452869,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 3.983028435897436,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    }
+  ],
+  "dpo_beta05": [
+    {
+      "id": "6269727a67ab0cfb",
+      "family": "rate",
+      "prompt": "Over an interval of 108 seconds, 161 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.4907407407407407,
+      "prediction": "{\"answer\":1.42,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.07074074074074077,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "5ca4f84f7e8aaa85",
+      "family": "rate",
+      "prompt": "Over an interval of 32 seconds, 86 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 2.6875,
+      "prediction": "{\"answer\":2.875,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.1875,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "dbf48ff4ac874541",
+      "family": "rate",
+      "prompt": "Over an interval of 81 seconds, 155 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.9135802469135803,
+      "prediction": "{\"answer\":1.729634,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.1839462469135804,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "8881cd1f68ee041b",
+      "family": "rate",
+      "prompt": "Over an interval of 43 seconds, 43 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.0,
+      "prediction": "{\"answer\":0.1,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.9,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "4181993a9094b951",
+      "family": "rate",
+      "prompt": "Over an interval of 49 seconds, 171 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 3.489795918367347,
+      "prediction": "{\"answer\":3.5,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.010204081632652962,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "bd0946c11e311972",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 128 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.7314285714285714,
+      "prediction": "{\"answer\":0.69,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.04142857142857148,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "3f3e38eea1e72092",
+      "family": "rate",
+      "prompt": "Over an interval of 80 seconds, 146 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 1.825,
+      "prediction": "{\"answer\":1.725,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.09999999999999987,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "bbeb9e5528285aaf",
+      "family": "rate",
+      "prompt": "Over an interval of 175 seconds, 83 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.4742857142857143,
+      "prediction": "{\"answer\":0.469,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.005285714285714338,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "89f008798628fba5",
+      "family": "rate",
+      "prompt": "Over an interval of 131 seconds, 63 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 0.48091603053435117,
+      "prediction": "{\"answer\":4.82,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 4.33908396946565,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    },
+    {
+      "id": "95957e05bd5b5c3d",
+      "family": "rate",
+      "prompt": "Over an interval of 39 seconds, 173 neural events occurred. Give the average event frequency (Hz).",
+      "answer": 4.435897435897436,
+      "prediction": "{\"answer\":5.0842,\"abstain\":false}",
+      "grade": {
+        "correct": false,
+        "format_valid": true,
+        "abstained": false,
+        "absolute_error": 0.6483025641025639,
+        "unsupported_assertion": false,
+        "error": "answer"
+      }
+    }
+  ]
+}

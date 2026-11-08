@@ -21,3 +21,10 @@ $PY -m scireason.cli evaluate-reward --split final > experiments/reward_final.lo
 $PY -m scireason.cli analyse
 $PY -c 'from scireason.analysis import analyse; analyse("final")'
 $PY scripts/format_diagnostic.py
+
+$PY scripts/audit_dataset.py
+$PY scripts/validate_tokenization.py
+$PY scripts/claim_diagnostic.py
+$PY scripts/verify_artifacts.py
+$PY scripts/numeric_errors.py
+$PY scripts/build_report.py
