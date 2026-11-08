@@ -50,8 +50,12 @@ First DPO seed 42 attempt: FAILED before optimiser creation because YAML `5e-05`
 Initial baseline/SFT evaluation used batch 1; archived in experiments/toolstudy/pilot_batch1. All primary comparisons are rerun at batch 8 for throughput, with unchanged prompts, tasks, greedy decoding and 64-token budget.
 Other seed runs and comparative report: IN PROGRESS. `scripts/run_toolstudy.sh` resumes completed training and reruns evaluation. Runtime logs and checkpoints remain on disk.
 Numerical value-only diagnostics were added post hoc after format failures; never substitute them for the frozen strict primary outcome.
-New public push: NOT RUN, awaiting concrete final review.
+New public push: COMPLETED after explicit final approval; agreed commit verified on GitHub.
 
 ### Extension completion
 
-COMPLETED: all three SFT seeds, all three DPO seeds, 4,032 primary predictions at batch 8, comparative analysis, plots, independent regrading and 16 tests. The initial DPO type failure is historical and recovered. 28 calculator requests executed, all incorrect numeric literals and no arithmetic operations. Do not describe correct model tool use as achieved. Publication of the extension remains NOT RUN pending confirmation.
+COMPLETED: all three SFT seeds, all three DPO seeds, 4,032 primary predictions at batch 8, comparative analysis, plots, independent regrading and 16 tests. The initial DPO type failure is historical and recovered. 28 calculator requests executed, all incorrect numeric literals and no arithmetic operations. Do not describe correct model tool use as achieved. Publication of the extension: COMPLETED after explicit final approval.
+
+Publication URL: https://github.com/Mioulin/scientific-reasoning-post-training-lab
+Approved research commit: f12bba304e8658d25673fe22c7b36806b98c5c3d
+CI status is available in GitHub Actions; publication-status documentation may have a later commit.

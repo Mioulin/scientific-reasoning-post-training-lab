@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETED",
+  "repository_url": "https://github.com/Mioulin/scientific-reasoning-post-training-lab",
+  "visibility": "public",
+  "approved_research_commit": "f12bba304e8658d25673fe22c7b36806b98c5c3d",
+  "remote_commit_verified": true,
+  "weights_uploaded": false,
+  "note": "Subsequent documentation-only commit records publication; live CI is linked from README."
+}

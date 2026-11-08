@@ -12,7 +12,7 @@ reliability. Results are measured from actual runs; pilot v1 is explicitly exclu
 See [progress](PROGRESS.md), [protocol](reports/preregistered_protocol.md),
 [data card](docs/data_card.md) and the research report for current execution status.
 
-## New verified-computation extension (local, awaiting publication)
+## Verified-computation extension (published)
 
 **COMPLETED:** three SFT and three DPO training seeds, 4,032 primary predictions,
 28 evaluated policy/split/mode combinations and an independent saved-result audit.
