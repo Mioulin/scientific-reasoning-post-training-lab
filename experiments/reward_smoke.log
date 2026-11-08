@@ -1,0 +1,22 @@
+W1108 10:20:07.614000 59029 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<01:11,  4.05it/s]Loading weights:  88%|████████▊ | 256/290 [00:00<00:00, 928.64it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 772.69it/s]
+[transformers] [1mQwen2ForSequenceClassification LOAD REPORT[0m from: Qwen/Qwen2.5-0.5B-Instruct
+Key          | Status  | 
+-------------+---------+-
+score.weight | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Tokenizing train dataset:   0%|          | 0/8 [00:00<?, ? examples/s]Tokenizing train dataset: 100%|██████████| 8/8 [00:00<00:00, 320.52 examples/s]
+Filtering train >256 tokens:   0%|          | 0/8 [00:00<?, ? examples/s]Filtering train >256 tokens: 100%|██████████| 8/8 [00:00<00:00, 1784.91 examples/s]
+Tokenizing eval dataset:   0%|          | 0/4 [00:00<?, ? examples/s]Tokenizing eval dataset: 100%|██████████| 4/4 [00:00<00:00, 825.61 examples/s]
+Filtering eval >256 tokens:   0%|          | 0/4 [00:00<?, ? examples/s]Filtering eval >256 tokens: 100%|██████████| 4/4 [00:00<00:00, 2821.12 examples/s]
+/Users/zalina/Documents/Codex/2026-11-08/claude-code-build-a-real-llm/outputs/scientific-reasoning-post-training-lab/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:313: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/zalina/Documents/Codex/2026-11-08/claude-code-build-a-real-llm/outputs/scientific-reasoning-post-training-lab/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:313: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': '0.7703', 'grad_norm': '19.56', 'learning_rate': '0.0001', 'num_tokens': '1949', 'min_reward': '0.7918', 'mean_reward': '0.8683', 'max_reward': '0.9447', 'accuracy': '0.25', 'margin': '-0.0794', 'epoch': '1'}
+{'loss': '0.8013', 'grad_norm': '33.87', 'learning_rate': '5e-05', 'num_tokens': '3898', 'min_reward': '-1.743', 'mean_reward': '-1.699', 'max_reward': '-1.655', 'accuracy': '0.625', 'margin': '0.02089', 'epoch': '2'}
+{'eval_loss': '0.7909', 'eval_runtime': '0.436', 'eval_samples_per_second': '9.175', 'eval_steps_per_second': '9.175', 'eval_num_tokens': '3898', 'eval_min_reward': '-1.735', 'eval_mean_reward': '-1.706', 'eval_max_reward': '-1.677', 'eval_accuracy': '0.5', 'eval_margin': '0.03879', 'epoch': '2'}
+{'train_runtime': '4.077', 'train_samples_per_second': '3.925', 'train_steps_per_second': '0.491', 'train_loss': '0.7858', 'epoch': '2'}
+{'eval_loss': '0.7909', 'eval_runtime': '0.302', 'eval_samples_per_second': '13.24', 'eval_steps_per_second': '13.24', 'eval_num_tokens': '3898', 'eval_min_reward': '-1.735', 'eval_mean_reward': '-1.706', 'eval_max_reward': '-1.677', 'eval_accuracy': '0.5', 'eval_margin': '0.03879', 'epoch': '2'}

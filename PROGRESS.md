@@ -7,9 +7,9 @@ Pilot v1 is preserved in experiments/pilot_v1; exclude it from reported comparis
 - Dataset generation and isolation tests: COMPLETED (288 train, 48 validation, 120 test, 120 final).
 - Baseline v2: COMPLETED, 15/120 strict test accuracy.
 - SFT v2: COMPLETED, two epochs / 72 steps; checkpoint reload and test evaluation complete.
-- DPO: NOT RUN (smoke completed; main run currently executing).
-- Beta sensitivity: NOT RUN.
-- Reward modelling: NOT RUN.
+- DPO: COMPLETED, one epoch / 36 steps, 60/120 primary test accuracy; SFT reference checked frozen.
+- Beta sensitivity: COMPLETED, beta .5, one epoch, 60/120 primary test accuracy.
+- Reward modelling: smoke COMPLETED; main training currently executing, final evaluation NOT RUN.
 - Final replication and analysis: NOT RUN.
 - CPU tests: COMPLETED, 10 passed, including checkpoint recovery.
 - PPO: NOT RUN (optional; scientific justification assessed after reward evaluation).

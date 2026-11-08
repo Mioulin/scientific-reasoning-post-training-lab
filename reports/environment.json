@@ -1,0 +1,31 @@
+{
+  "os": "macOS-15.7.4-arm64-arm-64bit",
+  "python": "3.12.13",
+  "machine": "arm64",
+  "mps_available": true,
+  "cuda_available": false,
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "trl": "1.17.1",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0",
+    "numpy": "2.5.4"
+  },
+  "cpu": "Apple M4 Pro, 12 cores (8 performance + 4 efficiency)",
+  "gpu": "Apple M4 Pro, 16 cores, Metal/MPS",
+  "unified_memory_gib": 24,
+  "free_storage_gib_at_initial_inspection": 73,
+  "git": "2.54.0",
+  "uv": "0.11.7",
+  "system_python_rejected": "3.9.6",
+  "selected_python": "3.12.13 via Homebrew, isolated .venv",
+  "external_infrastructure_cost_gbp": 0,
+  "cost_note": "No paid cloud used; excludes electricity and human time.",
+  "pre_run_memory_estimate_gib": [
+    4,
+    10
+  ],
+  "privacy": "No hardware serial number, UUID or credential retained."
+}

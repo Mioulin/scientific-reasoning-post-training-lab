@@ -15,9 +15,10 @@ for split in ["train", "validation", "test", "final"]:
     for row in read(split):
         for answer in [row["chosen"], row["rejected"]]:
             ids = tok.apply_chat_template(
-                messages(row) + [{"role": "assistant", "content": answer}], tokenize=True
+                messages(row) + [{"role": "assistant", "content": answer}], tokenize=False
             )
-            lengths.append(len(ids))
+            lengths.append(len(tok(ids, add_special_tokens=False)["input_ids"]))
+    assert min(lengths) > 20
     assert max(lengths) <= 256
     report[split] = {
         "pairs": len(lengths) // 2,

@@ -84,11 +84,15 @@ report.append(
     "hallucination rate. Unparseable answers remain primary failures even if they cannot be categorised "
     "as explicit false support. No model confidence probability or calibration score is elicited."
 )
-claim_diag=read('reports/claim_diagnostic.json')
-report.append('\n### Post-hoc claim-class diagnostic')
+claim_diag = read("reports/claim_diagnostic.json")
+report.append("\n### Post-hoc claim-class diagnostic")
 for name, d in claim_diag.items():
-    report.append(f"- {name}: supported-claim recall {d['supported_claim_recall']:.1%}; claim balanced accuracy {d['claim_balanced_accuracy']:.1%}.")
-report.append('There are only six supported and thirty unsupported claims per split. A policy that always says unsupported can achieve zero false support while failing every supported claim. Interpret the unsupported-assertion metric together with this diagnostic and family accuracy.')
+    report.append(
+        f"- {name}: supported-claim recall {d['supported_claim_recall']:.1%}; claim balanced accuracy {d['claim_balanced_accuracy']:.1%}."
+    )
+report.append(
+    "There are only six supported and thirty unsupported claims per split. A policy that always says unsupported can achieve zero false support while failing every supported claim. Interpret the unsupported-assertion metric together with this diagnostic and family accuracy."
+)
 
 report.append("\n## Reward modelling and shortcut probes")
 report.append(

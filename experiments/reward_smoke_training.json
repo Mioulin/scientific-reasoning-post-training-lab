@@ -1,0 +1,95 @@
+{
+  "status": "COMPLETED",
+  "metrics": {
+    "train_runtime": 4.0765,
+    "train_samples_per_second": 3.925,
+    "train_steps_per_second": 0.491,
+    "train_loss": 0.7858391404151917,
+    "epoch": 2.0
+  },
+  "validation": {
+    "eval_loss": 0.7909168004989624,
+    "eval_runtime": 0.302,
+    "eval_samples_per_second": 13.244,
+    "eval_steps_per_second": 13.244,
+    "eval_num_tokens": 3898.0,
+    "eval_min_reward": -1.7348239123821259,
+    "eval_mean_reward": -1.7059674561023712,
+    "eval_max_reward": -1.6771109700202942,
+    "eval_accuracy": 0.5,
+    "eval_margin": 0.03879120945930481,
+    "epoch": 2.0
+  },
+  "log_history": [
+    {
+      "loss": 0.7703337073326111,
+      "grad_norm": 19.56375503540039,
+      "learning_rate": 0.0001,
+      "num_tokens": 1949.0,
+      "min_reward": 0.7918320894241333,
+      "mean_reward": 0.8682561665773392,
+      "max_reward": 0.944680243730545,
+      "accuracy": 0.25,
+      "margin": -0.07940194010734558,
+      "epoch": 1.0,
+      "step": 1
+    },
+    {
+      "loss": 0.8013445734977722,
+      "grad_norm": 33.86677551269531,
+      "learning_rate": 5e-05,
+      "num_tokens": 3898.0,
+      "min_reward": -1.7427156269550323,
+      "mean_reward": -1.6990486830472946,
+      "max_reward": -1.6553817391395569,
+      "accuracy": 0.625,
+      "margin": 0.020893067121505737,
+      "epoch": 2.0,
+      "step": 2
+    },
+    {
+      "eval_loss": 0.7909168004989624,
+      "eval_runtime": 0.436,
+      "eval_samples_per_second": 9.175,
+      "eval_steps_per_second": 9.175,
+      "eval_num_tokens": 3898.0,
+      "eval_min_reward": -1.7348239123821259,
+      "eval_mean_reward": -1.7059674561023712,
+      "eval_max_reward": -1.6771109700202942,
+      "eval_accuracy": 0.5,
+      "eval_margin": 0.03879120945930481,
+      "epoch": 2.0,
+      "step": 2
+    },
+    {
+      "train_runtime": 4.0765,
+      "train_samples_per_second": 3.925,
+      "train_steps_per_second": 0.491,
+      "total_flos": 8387509478400.0,
+      "train_loss": 0.7858391404151917,
+      "epoch": 2.0,
+      "step": 2
+    },
+    {
+      "eval_loss": 0.7909168004989624,
+      "eval_runtime": 0.302,
+      "eval_samples_per_second": 13.244,
+      "eval_steps_per_second": 13.244,
+      "eval_num_tokens": 3898.0,
+      "eval_min_reward": -1.7348239123821259,
+      "eval_mean_reward": -1.7059674561023712,
+      "eval_max_reward": -1.6771109700202942,
+      "eval_accuracy": 0.5,
+      "eval_margin": 0.03879120945930481,
+      "epoch": 2.0,
+      "step": 2
+    }
+  ],
+  "elapsed_seconds": 4.700954959029332,
+  "memory": {
+    "process_max_rss_bytes": 3533881344,
+    "mps_allocated_bytes": 2020055296,
+    "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+  },
+  "checkpoint": "checkpoints/reward_smoke/final"
+}
