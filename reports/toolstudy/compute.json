@@ -1,0 +1,346 @@
+{
+  "stages": [
+    {
+      "stage": "sft_42",
+      "type": "training_and_validation",
+      "elapsed_seconds": 276.0326100840466,
+      "memory": {
+        "process_max_rss_bytes": 3125133312,
+        "mps_allocated_bytes": 2020044032,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_43",
+      "type": "training_and_validation",
+      "elapsed_seconds": 206.52549470798112,
+      "memory": {
+        "process_max_rss_bytes": 3528474624,
+        "mps_allocated_bytes": 2020044032,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_44",
+      "type": "training_and_validation",
+      "elapsed_seconds": 194.30420808296185,
+      "memory": {
+        "process_max_rss_bytes": 3519250432,
+        "mps_allocated_bytes": 2020044800,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_42",
+      "type": "training_and_validation",
+      "elapsed_seconds": 184.05151779198786,
+      "memory": {
+        "process_max_rss_bytes": 3519545344,
+        "mps_allocated_bytes": 2022203648,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_43",
+      "type": "training_and_validation",
+      "elapsed_seconds": 174.82671049999772,
+      "memory": {
+        "process_max_rss_bytes": 3374579712,
+        "mps_allocated_bytes": 2022203648,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_44",
+      "type": "training_and_validation",
+      "elapsed_seconds": 218.0003006250481,
+      "memory": {
+        "process_max_rss_bytes": 3524182016,
+        "mps_allocated_bytes": 2022203648,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "baseline_final_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 15.570454375003465,
+      "memory": {
+        "process_max_rss_bytes": 2619981824,
+        "mps_allocated_bytes": 2013580032,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "baseline_final_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 14.345673041010741,
+      "memory": {
+        "process_max_rss_bytes": 2619981824,
+        "mps_allocated_bytes": 2013574400,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "baseline_test_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 14.3325649999897,
+      "memory": {
+        "process_max_rss_bytes": 2619981824,
+        "mps_allocated_bytes": 2013579008,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "baseline_test_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 16.201957917015534,
+      "memory": {
+        "process_max_rss_bytes": 2619981824,
+        "mps_allocated_bytes": 2013574400,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_42_final_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 24.413542499998584,
+      "memory": {
+        "process_max_rss_bytes": 3443539968,
+        "mps_allocated_bytes": 2015742976,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_42_final_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 20.744269332964905,
+      "memory": {
+        "process_max_rss_bytes": 3443539968,
+        "mps_allocated_bytes": 2015738112,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_42_test_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 20.498202416987624,
+      "memory": {
+        "process_max_rss_bytes": 3443539968,
+        "mps_allocated_bytes": 2015742720,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_42_test_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 19.143295332964044,
+      "memory": {
+        "process_max_rss_bytes": 3443539968,
+        "mps_allocated_bytes": 2015738112,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_43_final_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 22.953901375003625,
+      "memory": {
+        "process_max_rss_bytes": 3446980608,
+        "mps_allocated_bytes": 2015741696,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_43_final_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 19.040217500005383,
+      "memory": {
+        "process_max_rss_bytes": 3446980608,
+        "mps_allocated_bytes": 2015738112,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_43_test_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 16.302208917040844,
+      "memory": {
+        "process_max_rss_bytes": 3446980608,
+        "mps_allocated_bytes": 2015741696,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_43_test_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 18.117570834001526,
+      "memory": {
+        "process_max_rss_bytes": 3446980608,
+        "mps_allocated_bytes": 2015737856,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_44_final_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 23.223016333009582,
+      "memory": {
+        "process_max_rss_bytes": 3442475008,
+        "mps_allocated_bytes": 2015741696,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_44_final_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 21.026757584011648,
+      "memory": {
+        "process_max_rss_bytes": 3442475008,
+        "mps_allocated_bytes": 2015737600,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_44_test_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 62.83510591700906,
+      "memory": {
+        "process_max_rss_bytes": 3442475008,
+        "mps_allocated_bytes": 2015741696,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "dpo_44_test_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 21.15291345800506,
+      "memory": {
+        "process_max_rss_bytes": 3442475008,
+        "mps_allocated_bytes": 2015737344,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_42_final_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 21.149168125004508,
+      "memory": {
+        "process_max_rss_bytes": 3439411200,
+        "mps_allocated_bytes": 2015741952,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_42_final_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 17.08694758301135,
+      "memory": {
+        "process_max_rss_bytes": 3439411200,
+        "mps_allocated_bytes": 2015737344,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_42_test_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 22.709548124985304,
+      "memory": {
+        "process_max_rss_bytes": 3439411200,
+        "mps_allocated_bytes": 2015741952,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_42_test_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 20.51101524999831,
+      "memory": {
+        "process_max_rss_bytes": 3439411200,
+        "mps_allocated_bytes": 2015737600,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_43_final_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 20.381675082957372,
+      "memory": {
+        "process_max_rss_bytes": 3443048448,
+        "mps_allocated_bytes": 2015742208,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_43_final_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 17.524998541048262,
+      "memory": {
+        "process_max_rss_bytes": 3443048448,
+        "mps_allocated_bytes": 2015737344,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_43_test_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 20.714321499981452,
+      "memory": {
+        "process_max_rss_bytes": 3443048448,
+        "mps_allocated_bytes": 2015741952,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_43_test_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 18.631939958024304,
+      "memory": {
+        "process_max_rss_bytes": 3443048448,
+        "mps_allocated_bytes": 2015737344,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_44_final_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 24.906167417007964,
+      "memory": {
+        "process_max_rss_bytes": 3437363200,
+        "mps_allocated_bytes": 2015742208,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_44_final_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 17.86203654197743,
+      "memory": {
+        "process_max_rss_bytes": 3437363200,
+        "mps_allocated_bytes": 2015737344,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_44_test_calculator.summary",
+      "type": "inference",
+      "elapsed_seconds": 19.988477082981262,
+      "memory": {
+        "process_max_rss_bytes": 3437363200,
+        "mps_allocated_bytes": 2015741952,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    },
+    {
+      "stage": "sft_44_test_direct.summary",
+      "type": "inference",
+      "elapsed_seconds": 17.256697959033772,
+      "memory": {
+        "process_max_rss_bytes": 3437363200,
+        "mps_allocated_bytes": 2015737600,
+        "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+      }
+    }
+  ],
+  "sum_instrumented_seconds": 1842.365486792056,
+  "note": "Sum of stage timers, not end-to-end wall time. Excludes model loading and code preparation; memory fields distinguish RSS high-water from current MPS allocation."
+}

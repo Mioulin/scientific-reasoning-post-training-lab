@@ -1,0 +1,94 @@
+{
+  "status": "COMPLETED",
+  "metrics": {
+    "n": 144,
+    "accuracy": 0.0,
+    "format_valid_rate": 0.0,
+    "numeric_accuracy": 0.0,
+    "numeric_mae_parseable_only": null,
+    "numeric_parseable_n": 0,
+    "numeric_n": 96,
+    "abstention_precision": null,
+    "abstention_recall": 0.0,
+    "unsupported_assertion_rate": 0.0,
+    "by_family": {
+      "bayes": 0.0,
+      "causality": 0.0,
+      "decay": 0.0,
+      "difference": 0.0,
+      "dilution": 0.0,
+      "evidence": 0.0,
+      "mean": 0.0,
+      "missing_rate": 0.0,
+      "missing_sd": 0.0,
+      "rate": 0.0,
+      "weighted": 0.0,
+      "zscore": 0.0
+    }
+  },
+  "elapsed_seconds": 35.4797780829831,
+  "generation": {
+    "max_new_tokens": 64,
+    "do_sample": false,
+    "num_beams": 1,
+    "repetition_penalty": 1.1,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "pad_token_id": 151645
+  },
+  "hardware": {
+    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.13",
+    "machine": "arm64",
+    "mps_available": true,
+    "cuda_available": false,
+    "packages": {
+      "torch": "2.15.0",
+      "transformers": "5.22.2",
+      "trl": "1.17.1",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "memory": {
+    "process_max_rss_bytes": 2238332928,
+    "mps_allocated_bytes": 2013556480,
+    "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+  },
+  "model": {
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "license": "Apache-2.0",
+    "cache_dir": ".cache/huggingface"
+  },
+  "adapter": null,
+  "dataset": {
+    "version": "scireason-program-v1",
+    "license": "CC0-1.0",
+    "seed": 20261108,
+    "splits": {
+      "train": {
+        "n": 384,
+        "sha256": "f1b9ca2844c983049215f32cf4261d5d5a82058e345e659df084393138ff9404"
+      },
+      "validation": {
+        "n": 64,
+        "sha256": "ecf90ad1fb8df356017a33383cedadb22644095a2f213841b7789834079949b3"
+      },
+      "test": {
+        "n": 144,
+        "sha256": "e3ae8f13643056efe30c1caa9707fac9848391ab341da7c408cbf808720e4734"
+      },
+      "final": {
+        "n": 144,
+        "sha256": "195611b0603733658e677988ec1faa0df1c6088cba2128ceb6454ebf98859cff"
+      }
+    }
+  },
+  "tool_calls": 0,
+  "tool_errors": 144
+}

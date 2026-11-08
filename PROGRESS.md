@@ -51,3 +51,7 @@ Initial baseline/SFT evaluation used batch 1; archived in experiments/toolstudy/
 Other seed runs and comparative report: IN PROGRESS. `scripts/run_toolstudy.sh` resumes completed training and reruns evaluation. Runtime logs and checkpoints remain on disk.
 Numerical value-only diagnostics were added post hoc after format failures; never substitute them for the frozen strict primary outcome.
 New public push: NOT RUN, awaiting concrete final review.
+
+### Extension completion
+
+COMPLETED: all three SFT seeds, all three DPO seeds, 4,032 primary predictions at batch 8, comparative analysis, plots, independent regrading and 16 tests. The initial DPO type failure is historical and recovered. 28 calculator requests executed, all incorrect numeric literals and no arithmetic operations. Do not describe correct model tool use as achieved. Publication of the extension remains NOT RUN pending confirmation.

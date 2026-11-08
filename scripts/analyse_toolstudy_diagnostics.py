@@ -1,5 +1,6 @@
 """Post-hoc diagnostics, explicitly separate from the frozen strict primary score."""
 
+import ast
 import json
 import math
 from pathlib import Path
@@ -10,6 +11,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+from scireason.metrics import paired_ci
 from scireason.runtime import dump
 from scireason.toolstudy import calculate
 
@@ -60,6 +62,22 @@ def main():
                         candidates = [r for r in rows if r["grade"]["correct"] == status]
                         if candidates:
                             examples.append({"policy": name, "mode": mode, **candidates[0]})
+    comparisons = {}
+    for split in ["test", "final"]:
+        for mode in ["direct", "calculator"]:
+
+            def records(name, split=split, mode=mode):
+                return [
+                    json.loads(s) for s in (root / f"{name}_{split}_{mode}.jsonl").read_text().splitlines()
+                ]
+
+            base = records("baseline")
+            for seed in [42, 43, 44]:
+                sft = records(f"sft_{seed}")
+                dpo = records(f"dpo_{seed}")
+                for label, a, b in [("sft_minus_baseline", base, sft), ("dpo_minus_sft", sft, dpo)]:
+                    comparisons[f"{split}_{mode}_{seed}_{label}"] = paired_ci(a, b)
+    dump(report / "model_comparisons.json", comparisons)
     dump(report / "diagnostics.json", table)
     dump(report / "examples.json", examples)
     fig, ax = plt.subplots(figsize=(9, 4))
@@ -101,6 +119,36 @@ def main():
                     }
                 )
     dump(report / "seed_summary.json", seed_summary)
+    compute = []
+    for kind in ["sft", "dpo"]:
+        for seed in [42, 43, 44]:
+            obj = json.loads(Path(f"experiments/toolstudy_{kind}_{seed}_training.json").read_text())
+            compute.append(
+                {
+                    "stage": f"{kind}_{seed}",
+                    "type": "training_and_validation",
+                    "elapsed_seconds": obj["elapsed_seconds"],
+                    "memory": obj["memory"],
+                }
+            )
+    for path in sorted(root.glob("*.summary.json")):
+        obj = json.loads(path.read_text())
+        compute.append(
+            {
+                "stage": path.stem,
+                "type": "inference",
+                "elapsed_seconds": obj["elapsed_seconds"],
+                "memory": obj["memory"],
+            }
+        )
+    dump(
+        report / "compute.json",
+        {
+            "stages": compute,
+            "sum_instrumented_seconds": sum(r["elapsed_seconds"] for r in compute),
+            "note": "Sum of stage timers, not end-to-end wall time. Excludes model loading and code preparation; memory fields distinguish RSS high-water from current MPS allocation.",
+        },
+    )
     path = report / "research_report.md"
     text = (
         path.read_text()
@@ -109,7 +157,28 @@ def main():
     for r in table:
         if r["split"] == "final":
             text += f"| {r['policy']} | {r['mode']} | {r['strict_accuracy']:.3f} | {r['format_valid_rate']:.3f} | {r['numeric_value_only_accuracy_posthoc']:.3f} | {r['id_accuracy']:.3f} | {r['ood_accuracy']:.3f} |\n"
-    text += "\nTraining seed ranges are in seed_summary.json; representative first-in-file successes/failures are in examples.json, with no claim that these are a random qualitative sample. Loss curves compare different objectives and their absolute values are not directly comparable. The tool-output schema differs from SFT numerical-output training; failures may reflect instruction distribution shift. No conclusion of intrinsic tool ineffectiveness is warranted.\n"
+    text += "\nExploratory paired model comparisons are in model_comparisons.json (no multiplicity correction; intervals do not capture family uncertainty). Training seed ranges are in seed_summary.json; representative first-in-file successes/failures are in examples.json, with no claim that these are a random qualitative sample. Compute timers and memory definitions are in compute.json. Loss curves compare different objectives and their absolute values are not directly comparable. The tool-output schema differs from SFT numerical-output training; failures may reflect instruction distribution shift. No conclusion of intrinsic tool ineffectiveness is warranted.\n"
+    final_sft = next(
+        r for r in seed_summary if r["split"] == "final" and r["mode"] == "direct" and r["kind"] == "sft"
+    )
+    final_dpo = next(
+        r for r in seed_summary if r["split"] == "final" and r["mode"] == "direct" and r["kind"] == "dpo"
+    )
+    executions = []
+    for p in root.glob("*calculator.jsonl"):
+        executions.extend(r for r in map(json.loads, p.read_text().splitlines()) if r["tool_used"])
+    operations = sum(
+        any(
+            isinstance(n, (ast.BinOp, ast.Call))
+            for n in ast.walk(ast.parse(json.loads(r["prediction"])["answer"], mode="eval"))
+        )
+        for r in executions
+    )
+    base = next(
+        r for r in table if r["policy"] == "baseline" and r["split"] == "final" and r["mode"] == "direct"
+    )
+    text += f"\n## Observed conclusion\n\nFinal strict accuracy: baseline {base['strict_accuracy']:.2%}; SFT mean {final_sft['mean_accuracy']:.2%} (seed SD {100 * final_sft['sample_sd_across_three_seeds']:.2f} percentage points); DPO mean {final_dpo['mean_accuracy']:.2%} (SD {100 * final_dpo['sample_sd_across_three_seeds']:.2f} points). Compare individual seeds before generalising: the strict score includes formatting, not only scientific knowledge.\n\nAcross all calculator conditions, {len(executions)} requests executed; {operations} contained an arithmetic operation. Executing a numeric literal does not demonstrate programme construction. The saved records distinguish execution from a correct final answer; this study does not establish reliable tool use.\n"
+    text += f"\nInstrumented training/evaluation timers sum to {sum(r['elapsed_seconds'] for r in compute):.1f} seconds, excluding model loading and development. Exact model revision, software, device and masking/reference checks are recorded in setup and summary JSON.\n"
     path.write_text(text)
 
 

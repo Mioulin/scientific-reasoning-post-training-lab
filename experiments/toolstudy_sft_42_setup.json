@@ -1,0 +1,62 @@
+{
+  "config": {
+    "name": "toolstudy_sft_42",
+    "seed": 42,
+    "epochs": 2,
+    "learning_rate": 0.0002,
+    "gradient_accumulation_steps": 8,
+    "data_root": "data/toolstudy"
+  },
+  "dataset_manifest": {
+    "version": "scireason-program-v1",
+    "license": "CC0-1.0",
+    "seed": 20261108,
+    "splits": {
+      "train": {
+        "n": 384,
+        "sha256": "f1b9ca2844c983049215f32cf4261d5d5a82058e345e659df084393138ff9404"
+      },
+      "validation": {
+        "n": 64,
+        "sha256": "ecf90ad1fb8df356017a33383cedadb22644095a2f213841b7789834079949b3"
+      },
+      "test": {
+        "n": 144,
+        "sha256": "e3ae8f13643056efe30c1caa9707fac9848391ab341da7c408cbf808720e4734"
+      },
+      "final": {
+        "n": 144,
+        "sha256": "195611b0603733658e677988ec1faa0df1c6088cba2128ceb6454ebf98859cff"
+      }
+    }
+  },
+  "model": {
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "license": "Apache-2.0",
+    "cache_dir": ".cache/huggingface"
+  },
+  "device": "mps",
+  "trainable_parameters": 540672,
+  "reference_check": null,
+  "mask_check": {
+    "masked_tokens": 102,
+    "supervised_tokens": 15
+  },
+  "hardware": {
+    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.13",
+    "machine": "arm64",
+    "mps_available": true,
+    "cuda_available": false,
+    "packages": {
+      "torch": "2.15.0",
+      "transformers": "5.22.2",
+      "trl": "1.17.1",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "numpy": "2.5.4"
+    }
+  }
+}

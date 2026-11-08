@@ -1,0 +1,16 @@
+{
+  "train": {
+    "n_responses": 768,
+    "max_tokens": 134,
+    "min_tokens": 110,
+    "configured_max_length": 256,
+    "truncation_needed": false
+  },
+  "validation": {
+    "n_responses": 128,
+    "max_tokens": 136,
+    "min_tokens": 109,
+    "configured_max_length": 256,
+    "truncation_needed": false
+  }
+}

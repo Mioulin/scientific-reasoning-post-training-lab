@@ -1,0 +1,23 @@
+{
+  "version": "scireason-program-v1",
+  "license": "CC0-1.0",
+  "seed": 20261108,
+  "splits": {
+    "train": {
+      "n": 384,
+      "sha256": "f1b9ca2844c983049215f32cf4261d5d5a82058e345e659df084393138ff9404"
+    },
+    "validation": {
+      "n": 64,
+      "sha256": "ecf90ad1fb8df356017a33383cedadb22644095a2f213841b7789834079949b3"
+    },
+    "test": {
+      "n": 144,
+      "sha256": "e3ae8f13643056efe30c1caa9707fac9848391ab341da7c408cbf808720e4734"
+    },
+    "final": {
+      "n": 144,
+      "sha256": "195611b0603733658e677988ec1faa0df1c6088cba2128ceb6454ebf98859cff"
+    }
+  }
+}

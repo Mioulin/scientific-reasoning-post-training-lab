@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETED",
+  "normalisation": "normalise the spelled-out ten before canonical numeric grouping; sort numbers within family",
+  "counts": {
+    "train": 384,
+    "validation": 64,
+    "test": 144,
+    "final": 144
+  },
+  "overlap": 0
+}

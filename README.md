@@ -12,6 +12,32 @@ reliability. Results are measured from actual runs; pilot v1 is explicitly exclu
 See [progress](PROGRESS.md), [protocol](reports/preregistered_protocol.md),
 [data card](docs/data_card.md) and the research report for current execution status.
 
+## New verified-computation extension (local, awaiting publication)
+
+**COMPLETED:** three SFT and three DPO training seeds, 4,032 primary predictions,
+28 evaluated policy/split/mode combinations and an independent saved-result audit.
+On the fresh 144-problem final set, strict accuracy is **0.0% baseline,
+16.2% SFT (seed SD 1.4 percentage points), 12.0% DPO (SD 2.4 points)**.
+The calculator condition scores **0% for every policy**: models mostly fail its output interface; the 28 executed requests return incorrect numeric values. This does not establish that calculators are ineffective. The new study
+shows limited transfer and worse mean DPO performance than SFT; it must not be
+combined with the older 120-example results below.
+
+See [extension report](reports/toolstudy/research_report.md),
+[Russian explanation](docs/verified_computation_ru.md),
+[raw-result verification](reports/toolstudy/verification.json) and
+[seed variation](reports/toolstudy/seed_summary.json).
+
+```bash
+bash scripts/run_toolstudy.sh
+PYTHONPATH=src uv run python scripts/verify_toolstudy.py
+```
+
+The runner reuses completed checkpoints by experiment name. For changed training
+settings, use a new experiment name/output and the train CLI; do not silently reuse
+an old checkpoint. The first DPO attempt failed due to a YAML learning-rate type;
+the corrected run and original failure are both retained. Batch-size verification
+found identical text and correctness across 1,152 repeated predictions.
+
 ## Measured results
 
 | Policy | Primary test (120) | Reserved final (120) |
@@ -34,7 +60,7 @@ The padding probe also breaks JSON format, so it does not isolate pure verbosity
 
 See the [research report](reports/research_report.md), [reserved-split results](reports/results_final.md),
 [paired intervals](reports/comparisons_test.json) and [engineering notes](reports/engineering_notes.md).
-Local tests: **10 passed**. [Linux GitHub Actions passed](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/runs/42472058525) for the published research commit.
+Original v2 suite: **10 passed**; extended local suite: **16 passed**. The linked CI run covers the earlier published study, not the new local extension. [Linux GitHub Actions passed](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/runs/42472058525) for the published research commit.
 
 ## Model and environment
 
