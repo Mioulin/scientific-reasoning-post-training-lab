@@ -1,0 +1,38 @@
+{
+  "config": {
+    "name": "sft",
+    "seed": 42,
+    "epochs": 2,
+    "learning_rate": 0.0002,
+    "gradient_accumulation_steps": 8
+  },
+  "model": {
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "license": "Apache-2.0",
+    "cache_dir": ".cache/huggingface"
+  },
+  "device": "mps",
+  "trainable_parameters": 540672,
+  "reference_check": null,
+  "mask_check": {
+    "masked_tokens": 103,
+    "supervised_tokens": 19
+  },
+  "hardware": {
+    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.13",
+    "machine": "arm64",
+    "mps_available": true,
+    "cuda_available": false,
+    "packages": {
+      "torch": "2.15.0",
+      "transformers": "5.22.2",
+      "trl": "1.17.1",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "numpy": "2.5.4"
+    }
+  }
+}
