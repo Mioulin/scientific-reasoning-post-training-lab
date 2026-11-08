@@ -6,7 +6,8 @@ def main():
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("prepare")
-    sub.add_parser("analyse")
+    analysis = sub.add_parser("analyse")
+    analysis.add_argument("--split", default="test", choices=["test", "final"])
     rm = sub.add_parser("evaluate-reward")
     rm.add_argument("--adapter", default="checkpoints/reward/final")
     rm.add_argument("--split", default="test")
@@ -32,7 +33,7 @@ def main():
     elif args.command == "analyse":
         from .analysis import analyse
 
-        analyse()
+        analyse(args.split)
     elif args.command == "evaluate-reward":
         from .reward_evaluation import evaluate_reward
 

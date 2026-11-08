@@ -9,7 +9,7 @@ Pilot v1 is preserved in experiments/pilot_v1; exclude it from reported comparis
 - SFT v2: COMPLETED, two epochs / 72 steps; checkpoint reload and test evaluation complete.
 - DPO: COMPLETED, one epoch / 36 steps, 60/120 primary test accuracy; SFT reference checked frozen.
 - Beta sensitivity: COMPLETED, beta .5, one epoch, 60/120 primary test accuracy.
-- Reward modelling: smoke COMPLETED; main training currently executing, final evaluation NOT RUN.
+- Reward modelling: training COMPLETED (two epochs / 72 steps); held-out evaluation currently executing.
 - Final replication and analysis: NOT RUN.
 - CPU tests: COMPLETED, 10 passed, including checkpoint recovery.
 - PPO: NOT RUN (optional; scientific justification assessed after reward evaluation).

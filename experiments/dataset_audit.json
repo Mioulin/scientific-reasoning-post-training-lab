@@ -1,0 +1,98 @@
+{
+  "train": {
+    "n": 288,
+    "families": {
+      "rate": 48,
+      "mean": 48,
+      "difference": 48,
+      "missing": 48,
+      "causality": 48,
+      "evidence": 48
+    },
+    "difficulty": {
+      "single-step": 288
+    },
+    "answer_classes": {
+      "numeric": 144,
+      "abstain": 48,
+      "unsupported": 72,
+      "supported": 24
+    }
+  },
+  "validation": {
+    "n": 48,
+    "families": {
+      "rate": 8,
+      "mean": 8,
+      "difference": 8,
+      "missing": 8,
+      "causality": 8,
+      "evidence": 8
+    },
+    "difficulty": {
+      "single-step": 48
+    },
+    "answer_classes": {
+      "numeric": 24,
+      "abstain": 8,
+      "unsupported": 12,
+      "supported": 4
+    }
+  },
+  "test": {
+    "n": 120,
+    "families": {
+      "rate": 12,
+      "mean": 12,
+      "difference": 12,
+      "missing": 12,
+      "causality": 12,
+      "evidence": 12,
+      "bayes": 12,
+      "decay": 12,
+      "missing_variance": 12,
+      "extrapolation": 12
+    },
+    "difficulty": {
+      "single-step": 72,
+      "held-out-family": 48
+    },
+    "answer_classes": {
+      "numeric": 60,
+      "abstain": 24,
+      "unsupported": 30,
+      "supported": 6
+    }
+  },
+  "final": {
+    "n": 120,
+    "families": {
+      "rate": 12,
+      "mean": 12,
+      "difference": 12,
+      "missing": 12,
+      "causality": 12,
+      "evidence": 12,
+      "bayes": 12,
+      "decay": 12,
+      "missing_variance": 12,
+      "extrapolation": 12
+    },
+    "difficulty": {
+      "single-step": 72,
+      "held-out-family": 48
+    },
+    "answer_classes": {
+      "numeric": 60,
+      "abstain": 24,
+      "unsupported": 30,
+      "supported": 6
+    }
+  },
+  "checks": {
+    "exact_prompt_duplicates": 0,
+    "numeric_condition_duplicates": 0,
+    "invalid_preferences": 0,
+    "scope": "all four generated splits; does not exclude semantic or pretraining overlap"
+  }
+}
