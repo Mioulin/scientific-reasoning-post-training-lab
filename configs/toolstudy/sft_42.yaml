@@ -1,0 +1,6 @@
+name: toolstudy_sft_42
+seed: 42
+epochs: 2
+learning_rate: 0.0002
+gradient_accumulation_steps: 8
+data_root: data/toolstudy

@@ -14,8 +14,8 @@ from .data import messages, read
 from .runtime import config, dump, hardware, load, memory
 
 
-def dataset(split, kind, tok, limit=None):
-    rows = read(split)
+def dataset(split, kind, tok, limit=None, root="data"):
+    rows = read(split, root=root)
     if limit:
         rows = rows[:limit]
     if kind == "sft":
@@ -105,8 +105,8 @@ def train(kind, config_path, resume=None, smoke=False):
         model=model,
         args=args,
         processing_class=tok,
-        train_dataset=dataset("train", kind, tok, 8 if smoke else None),
-        eval_dataset=dataset("validation", kind, tok, 4 if smoke else None),
+        train_dataset=dataset("train", kind, tok, 8 if smoke else None, cfg.get("data_root", "data")),
+        eval_dataset=dataset("validation", kind, tok, 4 if smoke else None, cfg.get("data_root", "data")),
     )
     reference_check = None
     if kind == "dpo":
@@ -136,7 +136,9 @@ def train(kind, config_path, resume=None, smoke=False):
         f"experiments/{name}_setup.json",
         {
             "config": cfg,
-            "dataset_manifest": __import__("json").loads(Path("data/manifest.json").read_text()),
+            "dataset_manifest": __import__("json").loads(
+                Path(cfg.get("data_root", "data"), "manifest.json").read_text()
+            ),
             "model": config(),
             "device": device,
             "trainable_parameters": trainable,

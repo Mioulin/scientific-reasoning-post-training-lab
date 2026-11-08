@@ -1,0 +1,8 @@
+name: toolstudy_dpo_42
+seed: 42
+epochs: 1
+learning_rate: 5e-05
+gradient_accumulation_steps: 8
+data_root: data/toolstudy
+beta: 0.1
+sft_checkpoint: checkpoints/toolstudy_sft_42/final
