@@ -1,8 +1,8 @@
 {
   "status": "COMPLETED",
-  "tracked_files_checked": 146,
-  "tracked_bytes": 2417797,
-  "historical_blobs_checked": 118,
+  "tracked_files_checked": 147,
+  "tracked_bytes": 2418855,
+  "historical_blobs_checked": 181,
   "findings": [],
   "manual_scope": [
     "Original synthetic data only; no private source files imported",
@@ -12,5 +12,5 @@
     "Public attribution uses GitHub noreply identity",
     "Local paths in diagnostic logs reveal only project location and public author name"
   ],
-  "limitations": "Heuristic secret/size checks plus source review. Not a comprehensive dependency-vulnerability audit; remote CI not yet executed."
+  "limitations": "Heuristic secret/size checks plus source review. Not a comprehensive dependency-vulnerability audit; remote CI evidence is recorded separately in reports/publication.json."
 }

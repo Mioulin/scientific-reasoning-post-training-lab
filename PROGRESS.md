@@ -16,20 +16,19 @@ Pilot v1 is preserved in experiments/pilot_v1 and excluded from primary comparis
 | Artifact verification | COMPLETED | 8 policy evaluations, 2 reward evaluations, 4 adapter hashes checked |
 | Russian learning/interview guides | COMPLETED | docs/learning_guide_ru.md; docs/interview_defence_ru.md |
 | PPO | NOT RUN | No PPO implementation in pinned TRL tree; online reward not sufficiently validated |
-| GitHub publication | BLOCKED | Awaiting explicit final public-push approval and authenticated gh CLI |
-| Remote CI | NOT RUN | Workflow configured; requires publication |
+| GitHub publication | COMPLETED | Public repository and research commit verified; reports/publication.json |
+| Remote CI | COMPLETED | Linux workflow 42472058525 passed, including tests and Ruff |
 
-No paid cloud resources were used. No public repository or weight upload has been created.
-GitHub connector identity: Mioulin. CLI authentication: user can run gh auth login.
+No paid cloud resources were used. The public repository is published; no model weights were uploaded.
+GitHub connector and CLI identity verified: Mioulin. User explicitly approved publication.
 
-## Resume publication
+## Publication evidence
 
-1. Read README.md, reports/research_report.md and reports/publication_check.json.
-2. Check gh auth status and gh api user --jq .login without printing credentials.
-3. Obtain/verify explicit final approval for public repository Mioulin/scientific-reasoning-post-training-lab.
-4. Recheck name availability; create and push only after approval. No model weights.
-5. Verify remote commit SHA and repository accessibility; monitor CI and repair failures.
-6. Update publication/CI status only from observed evidence.
+Repository: https://github.com/Mioulin/scientific-reasoning-post-training-lab
+Verified research commit: 0392c9150b54404c7d7005b0c680adedec2d143f.
+Linux CI: https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/runs/42472058525
+See reports/publication.json. Documentation-only publication-status commits may follow.
+No further approval is required for the already-authorised publication; model-weight upload remains unauthorised.
 
 ## Reproduction
 

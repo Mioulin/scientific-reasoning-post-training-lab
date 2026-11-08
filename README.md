@@ -1,5 +1,7 @@
 # Scientific Reasoning Post-Training Lab
 
+[![tests](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/workflows/tests.yml)
+
 A reproducible, AI-assisted research engineering study of **SFT, DPO and scalar
 reward modelling** on a small language model. The question is whether post-training
 improves verifiable numerical answers, evidence-sensitive claims and appropriate
@@ -32,7 +34,7 @@ The padding probe also breaks JSON format, so it does not isolate pure verbosity
 
 See the [research report](reports/research_report.md), [reserved-split results](reports/results_final.md),
 [paired intervals](reports/comparisons_test.json) and [engineering notes](reports/engineering_notes.md).
-Local tests: **10 passed**. Remote GitHub Actions: **NOT RUN** before publication.
+Local tests: **10 passed**. [Linux GitHub Actions passed](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/runs/42472058525) for the published research commit.
 
 ## Model and environment
 
@@ -132,7 +134,7 @@ Repository ownership alone does not establish unaided implementation or independ
 mastery. The learning exercises support personal reproduction and technical defence.
 
 Original code: MIT. Generated problem data: CC0-1.0. Qwen weights: Apache-2.0.
-Weights and credentials are not committed. Publication requires owner confirmation.
+Weights and credentials are not committed. Published with owner approval; no model weights were uploaded.
 
 ## Primary references
 

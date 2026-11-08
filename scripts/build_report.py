@@ -219,8 +219,8 @@ report.append(
     "Local CPU tests cover schemas, disjoint splits, oracle preferences, metric tolerances, LoRA "
     "updates, frozen DPO reference and checkpoint resume. Saved full-size adapters were reloaded for "
     "all evaluations. `artifact_verification.json` checks predictions, metrics and weight hashes. "
-    "Plots are derived from the same saved rows. GitHub Actions is configured; remote CI is NOT RUN "
-    "until publication. Code and experiment execution are AI-assisted; personal mastery requires "
+    "Plots are derived from the same saved rows. GitHub Actions is configured; see reports/publication.json for verified remote CI evidence "
+    "when available. Code and experiment execution are AI-assisted; personal mastery requires "
     "independent reproduction. See the Russian learning and interview guides."
 )
 report.append(

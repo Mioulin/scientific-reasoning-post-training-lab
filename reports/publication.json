@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETED",
+  "repository_url": "https://github.com/Mioulin/scientific-reasoning-post-training-lab",
+  "visibility": "public",
+  "verified_research_commit": "0392c9150b54404c7d7005b0c680adedec2d143f",
+  "ci_status": "COMPLETED",
+  "ci_conclusion": "success",
+  "ci_url": "https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/runs/42472058525",
+  "authorization": "User explicitly approved first public publication in this chat.",
+  "weights_uploaded": false,
+  "note": "This records the verified research commit. Subsequent documentation-only commits may record publication status."
+}

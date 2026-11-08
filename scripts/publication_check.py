@@ -59,7 +59,7 @@ report = {
         "Public attribution uses GitHub noreply identity",
         "Local paths in diagnostic logs reveal only project location and public author name",
     ],
-    "limitations": "Heuristic secret/size checks plus source review. Not a comprehensive dependency-vulnerability audit; remote CI not yet executed.",
+    "limitations": "Heuristic secret/size checks plus source review. Not a comprehensive dependency-vulnerability audit; remote CI evidence is recorded separately in reports/publication.json.",
 }
 Path("reports/publication_check.json").write_text(json.dumps(report, indent=2) + "\n")
 print(json.dumps({k: v for k, v in report.items() if k not in ["manual_scope"]}, indent=2))

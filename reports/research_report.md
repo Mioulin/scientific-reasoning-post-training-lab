@@ -188,7 +188,7 @@ PPO status: **NOT RUN**. The blocker is scientific scope and an unvalidated onli
 
 ## Verification and attribution
 
-Local CPU tests cover schemas, disjoint splits, oracle preferences, metric tolerances, LoRA updates, frozen DPO reference and checkpoint resume. Saved full-size adapters were reloaded for all evaluations. `artifact_verification.json` checks predictions, metrics and weight hashes. Plots are derived from the same saved rows. GitHub Actions is configured; remote CI is NOT RUN until publication. Code and experiment execution are AI-assisted; personal mastery requires independent reproduction. See the Russian learning and interview guides.
+Local CPU tests cover schemas, disjoint splits, oracle preferences, metric tolerances, LoRA updates, frozen DPO reference and checkpoint resume. Saved full-size adapters were reloaded for all evaluations. `artifact_verification.json` checks predictions, metrics and weight hashes. Plots are derived from the same saved rows. GitHub Actions is configured; see reports/publication.json for verified remote CI evidence when available. Code and experiment execution are AI-assisted; personal mastery requires independent reproduction. See the Russian learning and interview guides.
 
 
 References: [TRL](https://huggingface.co/docs/trl/index), [Alignment Handbook](https://github.com/huggingface/alignment-handbook), [DPO](https://arxiv.org/abs/2305.18290), [LoRA](https://arxiv.org/abs/2106.09685).
