@@ -67,3 +67,11 @@ def test_experiment_config_learning_rates_are_numeric():
     for path in Path("configs/toolstudy").glob("*.yaml"):
         cfg = yaml.safe_load(path.read_text())
         assert isinstance(cfg["learning_rate"], float) and 0 < cfg["learning_rate"] < 1
+
+
+def test_spelled_out_numbers_share_condition_key():
+    from scireason.toolstudy import semantic_key
+
+    a = {"family": "weighted", "prompt": "3 readings average 42; ten readings average 68"}
+    b = {"family": "weighted", "prompt": "3 readings average 42; 10 readings average 68"}
+    assert semantic_key(a) == semantic_key(b)

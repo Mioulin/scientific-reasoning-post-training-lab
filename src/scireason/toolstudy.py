@@ -214,10 +214,19 @@ def make_example(family, split, i, rng):
     }
 
 
+def semantic_key(row):
+    """Independent audit normalises spelled-out quantities in held-out wording."""
+    import re
+
+    prompt = re.sub(r"\bten\b", "10", row["prompt"])
+    return row["family"] + ":" + ",".join(sorted(re.findall(r"\d+", prompt)))
+
+
 def prepare():
     root = Path(ROOT)
     root.mkdir(parents=True, exist_ok=True)
     seen = set()
+    semantic_seen = set()
     manifest = {"version": VERSION, "license": "CC0-1.0", "seed": 20261108, "splits": {}}
     for split, n in [("train", 48), ("validation", 8), ("test", 12), ("final", 12)]:
         rng = random.Random(f"20261108-{split}")
@@ -227,6 +236,12 @@ def prepare():
                 row = make_example(family, split, i, rng)
                 while row["instance_key"] in seen:
                     row = make_example(family, split, i, rng)
+                key = semantic_key(row)
+                if key in semantic_seen:
+                    raise ValueError(
+                        "Semantic numerical-condition overlap; revise generation before training"
+                    )
+                semantic_seen.add(key)
                 seen.add(row["instance_key"])
                 rows.append(row)
         text = "".join(json.dumps(r, sort_keys=True) + "\n" for r in rows)
