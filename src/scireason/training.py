@@ -136,6 +136,7 @@ def train(kind, config_path, resume=None, smoke=False):
         f"experiments/{name}_setup.json",
         {
             "config": cfg,
+            "dataset_manifest": __import__("json").loads(Path("data/manifest.json").read_text()),
             "model": config(),
             "device": device,
             "trainable_parameters": trainable,

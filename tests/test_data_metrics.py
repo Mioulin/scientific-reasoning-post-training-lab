@@ -49,3 +49,15 @@ def test_independent_rate_oracle(tmp_path):
             count, duration = map(int, re.findall(r"\d+", r["prompt"]))
             assert math.isclose(r["answer"] * duration, count)
         assert set(json.loads(r["chosen"])) == {"answer", "abstain"}
+
+
+def test_no_numeric_instance_overlap(tmp_path):
+    import re
+
+    prepare(tmp_path)
+    seen = set()
+    for split in ["train", "validation", "test", "final"]:
+        for row in read(split, tmp_path):
+            key = (row["family"], tuple(sorted(re.findall(r"\d+", row["prompt"]))))
+            assert key not in seen
+            seen.add(key)

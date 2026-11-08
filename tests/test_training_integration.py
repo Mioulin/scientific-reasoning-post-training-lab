@@ -121,3 +121,41 @@ def test_pairwise_loss_direction():
     loss.backward()
     assert chosen.grad.item() < 0 and rejected.grad.item() > 0
     assert abs(loss.item() - 0.693147) < 1e-5
+
+
+def test_checkpoint_resume_restores_step(tmp_path):
+    from transformers import set_seed
+
+    torch.set_num_threads(1)
+    set_seed(7)
+    model, tok = tiny()
+    data = Dataset.from_list([{"prompt": "Question ", "completion": "right [EOS]"}] * 2)
+    common = {
+        "output_dir": str(tmp_path),
+        "use_cpu": True,
+        "bf16": False,
+        "fp16": False,
+        "per_device_train_batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "report_to": "none",
+        "save_strategy": "steps",
+        "save_steps": 1,
+        "max_length": 32,
+        "completion_only_loss": True,
+        "gradient_checkpointing": False,
+        "dataloader_pin_memory": False,
+    }
+    first = SFTTrainer(
+        model=model, processing_class=tok, args=SFTConfig(**common, max_steps=1), train_dataset=data
+    )
+    first.train()
+    checkpoint = tmp_path / "checkpoint-1"
+    assert (checkpoint / "optimizer.pt").exists()
+    set_seed(7)
+    model2, tok2 = tiny()
+    second = SFTTrainer(
+        model=model2, processing_class=tok2, args=SFTConfig(**common, max_steps=2), train_dataset=data
+    )
+    second.train(resume_from_checkpoint=str(checkpoint))
+    assert second.state.global_step == 2
+    assert (tmp_path / "checkpoint-2" / "trainer_state.json").exists()

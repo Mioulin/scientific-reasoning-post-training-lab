@@ -1,11 +1,11 @@
 {
-  "version": "scireason-synthetic-v1",
+  "version": "scireason-synthetic-v2",
   "seed": 1729,
   "license": "CC0-1.0",
   "splits": {
     "train": {
       "n": 288,
-      "sha256": "65c757198fe4a2751d2081377b060f55c486e47cd3398c865d5c2730938dad9a",
+      "sha256": "d75e47da809fe429c95b5660a58a1933ed4eabaef592750b1af5b94471a5cab4",
       "families": [
         "rate",
         "mean",
@@ -17,7 +17,7 @@
     },
     "validation": {
       "n": 48,
-      "sha256": "019808db7dfcb641e7fde6b9828c4fb9837dc93baba2d196206ccd2d90745911",
+      "sha256": "4c130721499e55667311a37ba9a6a75062fd1bdf9c61c92f0e874de6cd7b3f34",
       "families": [
         "rate",
         "mean",
@@ -29,7 +29,7 @@
     },
     "test": {
       "n": 120,
-      "sha256": "0643856eb8c8b63ef79126c0c263b93717b622f83a36ec8e71c680573b4b001b",
+      "sha256": "79aeede60f9dbba93ca7a7e8f5388f89468895b4a07a863cbfa8778d69a06c6f",
       "families": [
         "rate",
         "mean",
@@ -45,7 +45,7 @@
     },
     "final": {
       "n": 120,
-      "sha256": "6183fb571cc82373310f87d9ae436b3b287af86baceb4824c558cb4f0aa8b240",
+      "sha256": "45dbb3c8346ec212bffb2b9dd1f170e3970c246b76fecf550b8fcb44ed5ffe26",
       "families": [
         "rate",
         "mean",

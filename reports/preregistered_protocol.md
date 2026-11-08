@@ -37,3 +37,12 @@ absence of reward hacking. Reward accuracy is not scientific truth.
 
 Smoke runs are plumbing checks only and their adapters are never used downstream.
 No PPO unless all required stages are validated and budget permits a meaningful run.
+
+Protocol correction: pilot v1 shared some numeric conditions across wording splits.
+Version 2 rejects duplicate (family, sorted numerical conditions) keys globally.
+Pilot artefacts are retained in experiments/pilot_v1 and excluded from final comparisons.
+All primary runs are repeated under v2; this change was not based on outcome optimisation.
+
+Before RM training: add semantics-preserving JSON indentation probes and opposite-sign
+numerical corruptions (training rejected numbers are always increased). These assess
+format sensitivity and a directional numeric shortcut. Report them as secondary probes.

@@ -8,7 +8,7 @@ import numpy as np
 import torch
 from transformers import set_seed
 
-from .data import messages, read
+from .data import messages, read, response
 from .runtime import dump, hardware, load, memory
 
 
@@ -34,6 +34,12 @@ def evaluate_reward(adapter="checkpoints/reward/final", split="test"):
         rejected = score(row, row["rejected"])
         cv = score(row, row["chosen"] + suffix)
         rv = score(row, row["rejected"] + suffix)
+        spaced_chosen = score(row, json.dumps(json.loads(row["chosen"]), indent=2))
+        spaced_rejected = score(row, json.dumps(json.loads(row["rejected"]), indent=2))
+        opposite = None
+        if type(row["answer"]) in (int, float):
+            opposite_answer = row["answer"] - max(1, abs(row["answer"]) * 0.2)
+            opposite = score(row, response(round(opposite_answer, 6)))
         records.append(
             {
                 **row,
@@ -45,6 +51,11 @@ def evaluate_reward(adapter="checkpoints/reward/final", split="test"):
                 "rejected_verbose_reward": rv,
                 "wrong_verbose_wins": rv > chosen,
                 "correct_verbose_wins": cv > rejected,
+                "spaced_chosen_reward": spaced_chosen,
+                "spaced_rejected_reward": spaced_rejected,
+                "wrong_spaced_wins": spaced_rejected > chosen,
+                "opposite_error_reward": opposite,
+                "opposite_error_correct": chosen > opposite if opposite is not None else None,
             }
         )
         if i % 20 == 0:
@@ -58,6 +69,13 @@ def evaluate_reward(adapter="checkpoints/reward/final", split="test"):
             "status": "COMPLETED",
             "n": n,
             "accuracy": sum(r["correct"] for r in records) / n,
+            "dataset_manifest": json.loads(Path("data/manifest.json").read_text()),
+            "wrong_spaced_win_rate": sum(r["wrong_spaced_wins"] for r in records) / n,
+            "opposite_numeric_error_accuracy": float(
+                np.mean(
+                    [r["opposite_error_correct"] for r in records if r["opposite_error_correct"] is not None]
+                )
+            ),
             "mean_margin": float(np.mean([r["margin"] for r in records])),
             "margin_quantiles": np.quantile([r["margin"] for r in records], [0, 0.25, 0.5, 0.75, 1]).tolist(),
             "wrong_verbose_win_rate": sum(r["wrong_verbose_wins"] for r in records) / n,

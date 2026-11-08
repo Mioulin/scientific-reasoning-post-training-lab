@@ -1,0 +1,80 @@
+{
+  "status": "COMPLETED",
+  "metrics": {
+    "train_runtime": 5.5526,
+    "train_samples_per_second": 2.882,
+    "train_steps_per_second": 0.36,
+    "train_loss": 0.9712054431438446,
+    "epoch": 2.0
+  },
+  "validation": {
+    "eval_loss": 1.1628621816635132,
+    "eval_runtime": 0.293,
+    "eval_samples_per_second": 13.654,
+    "eval_steps_per_second": 13.654,
+    "eval_entropy": 0.9828212559223175,
+    "eval_mean_token_accuracy": 0.6375000178813934,
+    "eval_num_tokens": 1948.0,
+    "epoch": 2.0
+  },
+  "log_history": [
+    {
+      "loss": 1.0886046886444092,
+      "grad_norm": 11.313926696777344,
+      "learning_rate": 0.0002,
+      "entropy": 0.735124759376049,
+      "mean_token_accuracy": 0.7375967428088188,
+      "num_tokens": 974.0,
+      "epoch": 1.0,
+      "step": 1
+    },
+    {
+      "loss": 0.85380619764328,
+      "grad_norm": 5.097118854522705,
+      "learning_rate": 0.0001,
+      "entropy": 0.7891866341233253,
+      "mean_token_accuracy": 0.7441756948828697,
+      "num_tokens": 1948.0,
+      "epoch": 2.0,
+      "step": 2
+    },
+    {
+      "eval_loss": 1.1628621816635132,
+      "eval_runtime": 0.3731,
+      "eval_samples_per_second": 10.722,
+      "eval_steps_per_second": 10.722,
+      "eval_entropy": 0.9828212559223175,
+      "eval_mean_token_accuracy": 0.6375000178813934,
+      "eval_num_tokens": 1948.0,
+      "epoch": 2.0,
+      "step": 2
+    },
+    {
+      "train_runtime": 5.5526,
+      "train_samples_per_second": 2.882,
+      "train_steps_per_second": 0.36,
+      "total_flos": 4189432507392.0,
+      "train_loss": 0.9712054431438446,
+      "epoch": 2.0,
+      "step": 2
+    },
+    {
+      "eval_loss": 1.1628621816635132,
+      "eval_runtime": 0.293,
+      "eval_samples_per_second": 13.654,
+      "eval_steps_per_second": 13.654,
+      "eval_entropy": 0.9828212559223175,
+      "eval_mean_token_accuracy": 0.6375000178813934,
+      "eval_num_tokens": 1948.0,
+      "epoch": 2.0,
+      "step": 2
+    }
+  ],
+  "elapsed_seconds": 6.178214916959405,
+  "memory": {
+    "process_max_rss_bytes": 3042443264,
+    "mps_allocated_bytes": 2020044032,
+    "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+  },
+  "checkpoint": "checkpoints/sft_smoke/final"
+}

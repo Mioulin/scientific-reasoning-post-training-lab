@@ -101,6 +101,7 @@ def evaluate(name, adapter=None, split="test", limit=None):
         f"experiments/{name}_{split}_summary.json",
         {
             "status": "COMPLETED",
+            "dataset_manifest": json.loads(Path("data/manifest.json").read_text()),
             "model": config(),
             "adapter": adapter,
             "split": split,

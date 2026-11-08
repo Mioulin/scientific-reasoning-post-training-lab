@@ -3,9 +3,10 @@
 import hashlib
 import json
 import random
+import re
 from pathlib import Path
 
-VERSION = "scireason-synthetic-v1"
+VERSION = "scireason-synthetic-v2"
 SYSTEM = (
     "Solve the scientific task. Return only a JSON object with exactly two keys: "
     '"answer" (a number, "supported", "unsupported", or null) and "abstain" (boolean). '
@@ -124,6 +125,7 @@ def prepare(root="data"):
     root.mkdir(exist_ok=True)
     manifest = {"version": VERSION, "seed": 1729, "license": "CC0-1.0", "splits": {}}
     seen = set()
+    instances = set()
     for split, n in [("train", 48), ("validation", 8), ("test", 12), ("final", 12)]:
         rng = random.Random(f"1729-{split}")
         families = FAMILIES if split in ("train", "validation") else FAMILIES + OOD
@@ -131,8 +133,11 @@ def prepare(root="data"):
         for family in families:
             for i in range(n):
                 row = example(family, split, i, rng)
-                while row["id"] in seen:
+                key = (family, tuple(sorted(re.findall(r"\d+", row["prompt"]))))
+                while row["id"] in seen or key in instances:
                     row = example(family, split, i, rng)
+                    key = (family, tuple(sorted(re.findall(r"\d+", row["prompt"]))))
+                instances.add(key)
                 seen.add(row["id"])
                 rows.append(row)
         payload = "".join(json.dumps(r, sort_keys=True) + "\n" for r in rows)
