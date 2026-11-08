@@ -49,6 +49,9 @@ def dataset(split, kind, tok, limit=None, root="data"):
 
 def train(kind, config_path, resume=None, smoke=False):
     cfg = yaml.safe_load(Path(config_path).read_text())
+    cfg["learning_rate"] = float(cfg["learning_rate"])
+    if not 0 < cfg["learning_rate"] < 1:
+        raise ValueError("learning_rate must be between zero and one")
     set_seed(cfg["seed"])
     name = cfg["name"] + ("_smoke" if smoke else "")
     output = f"checkpoints/{name}"

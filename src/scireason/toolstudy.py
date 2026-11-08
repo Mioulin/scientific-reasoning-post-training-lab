@@ -258,6 +258,8 @@ def evaluate_policy(name, adapter=None):
     set_seed(42)
     model, tok, device = load(adapter)
     model.eval()
+    tok.padding_side = "left"
+    batch_size = 8
     gen = json.loads(Path("configs/generation.json").read_text())
     gen["max_new_tokens"] = 64
     for split in ["test", "final"]:
@@ -267,34 +269,40 @@ def evaluate_policy(name, adapter=None):
             records = []
             path = Path(f"experiments/toolstudy/{name}_{split}_{mode}.jsonl")
             with path.open("w") as f:
-                for i, row in enumerate(rows):
-                    # Only system instruction and problem text cross the model boundary.
-                    msgs = [
-                        {"role": "system", "content": SYSTEM if mode == "direct" else TOOL_SYSTEM},
-                        {"role": "user", "content": row["prompt"]},
-                    ]
-                    inp = tok(
-                        tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True),
-                        return_tensors="pt",
-                    ).to(device)
+                for offset in range(0, len(rows), batch_size):
+                    batch = rows[offset : offset + batch_size]
+                    texts = []
+                    for row in batch:
+                        msgs = [
+                            {"role": "system", "content": SYSTEM if mode == "direct" else TOOL_SYSTEM},
+                            {"role": "user", "content": row["prompt"]},
+                        ]
+                        texts.append(
+                            tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+                        )
+                    inp = tok(texts, return_tensors="pt", padding=True).to(device)
                     with torch.inference_mode():
                         out = model.generate(**inp, **gen)
-                    pred = tok.decode(out[0, inp.input_ids.shape[1] :], skip_special_tokens=True)
-                    resolved, used, error = resolve(pred, mode)
-                    rec = {
-                        **row,
-                        "prediction": pred,
-                        "resolved": resolved,
-                        "tool_used": used,
-                        "tool_error": error,
-                        "generated_tokens": int(out.shape[1] - inp.input_ids.shape[1]),
-                        "grade": grade(resolved, row["answer"]),
-                    }
-                    records.append(rec)
-                    f.write(json.dumps(rec) + "\n")
+                    for index, row in enumerate(batch):
+                        generated = out[index, inp.input_ids.shape[1] :]
+                        pred = tok.decode(generated, skip_special_tokens=True)
+                        resolved, used, error = resolve(pred, mode)
+                        rec = {
+                            **row,
+                            "prediction": pred,
+                            "resolved": resolved,
+                            "tool_used": used,
+                            "tool_error": error,
+                            "generated_tokens_excluding_special": int(
+                                sum(int(t) not in tok.all_special_ids for t in generated)
+                            ),
+                            "grade": grade(resolved, row["answer"]),
+                        }
+                        records.append(rec)
+                        f.write(json.dumps(rec) + "\n")
                     f.flush()
-                    if i % 36 == 0:
-                        print(name, split, mode, i, flush=True)
+                    if offset % 32 == 0:
+                        print(name, split, mode, offset, flush=True)
             dump(
                 path.with_suffix(".summary.json"),
                 {
@@ -302,6 +310,7 @@ def evaluate_policy(name, adapter=None):
                     "metrics": summarise(records),
                     "elapsed_seconds": time.perf_counter() - start,
                     "generation": gen,
+                    "batch_size": batch_size,
                     "hardware": hardware(),
                     "memory": memory(),
                     "model": config(),

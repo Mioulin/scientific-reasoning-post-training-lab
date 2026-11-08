@@ -1,7 +1,7 @@
 name: toolstudy_dpo_42
 seed: 42
 epochs: 1
-learning_rate: 5e-05
+learning_rate: 0.00005
 gradient_accumulation_steps: 8
 data_root: data/toolstudy
 beta: 0.1

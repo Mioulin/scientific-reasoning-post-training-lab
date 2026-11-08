@@ -40,3 +40,14 @@ uv run pytest -q
 uv run ruff check src tests scripts
 
 See CLAUDE.md for integrity constraints. Do not tune on existing test/final results.
+
+## Verified computation extension, 2026-11-08
+
+Branch: research/verified-computation. Original published v2 study remains separate.
+Fresh data: 384 train, 64 validation, 144 test, 144 final; eight training families and four held-out families.
+SFT seed 42: COMPLETED (96 steps, saved/reloaded final adapter).
+First DPO seed 42 attempt: FAILED before optimiser creation because YAML `5e-05` became a string. Preserved failure JSON and `experiments/toolstudy/dpo_42_training_failed_yaml.log`. Corrected configs to numeric 0.00005, added explicit rate parsing and regression test. Retry IN PROGRESS.
+Initial baseline/SFT evaluation used batch 1; archived in experiments/toolstudy/pilot_batch1. All primary comparisons are rerun at batch 8 for throughput, with unchanged prompts, tasks, greedy decoding and 64-token budget.
+Other seed runs and comparative report: IN PROGRESS. `scripts/run_toolstudy.sh` resumes completed training and reruns evaluation. Runtime logs and checkpoints remain on disk.
+Numerical value-only diagnostics were added post hoc after format failures; never substitute them for the frozen strict primary outcome.
+New public push: NOT RUN, awaiting concrete final review.
