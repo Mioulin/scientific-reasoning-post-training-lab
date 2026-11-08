@@ -1,0 +1,19 @@
+W1108 10:02:52.778000 56971 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<02:38,  1.83it/s]Loading weights:  76%|███████▌  | 219/290 [00:00<00:00, 423.53it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 317.11it/s]
+Tokenizing train dataset:   0%|          | 0/8 [00:00<?, ? examples/s]Tokenizing train dataset: 100%|██████████| 8/8 [00:00<00:00, 346.47 examples/s]
+Building labels for train dataset:   0%|          | 0/8 [00:00<?, ? examples/s]Building labels for train dataset: 100%|██████████| 8/8 [00:00<00:00, 3025.92 examples/s]
+Truncating train dataset:   0%|          | 0/8 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 8/8 [00:00<00:00, 3423.22 examples/s]
+Dropping fully masked examples from train dataset:   0%|          | 0/8 [00:00<?, ? examples/s]Dropping fully masked examples from train dataset: 100%|██████████| 8/8 [00:00<00:00, 7212.90 examples/s]
+Tokenizing eval dataset:   0%|          | 0/4 [00:00<?, ? examples/s]Tokenizing eval dataset: 100%|██████████| 4/4 [00:00<00:00, 876.23 examples/s]
+Building labels for eval dataset:   0%|          | 0/4 [00:00<?, ? examples/s]Building labels for eval dataset: 100%|██████████| 4/4 [00:00<00:00, 1757.70 examples/s]
+Truncating eval dataset:   0%|          | 0/4 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 4/4 [00:00<00:00, 1860.41 examples/s]
+Dropping fully masked examples from eval dataset:   0%|          | 0/4 [00:00<?, ? examples/s]Dropping fully masked examples from eval dataset: 100%|██████████| 4/4 [00:00<00:00, 3746.59 examples/s]
+/Users/zalina/Documents/Codex/2026-11-08/claude-code-build-a-real-llm/outputs/scientific-reasoning-post-training-lab/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:313: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+/Users/zalina/Documents/Codex/2026-11-08/claude-code-build-a-real-llm/outputs/scientific-reasoning-post-training-lab/.venv/lib/python3.12/site-packages/peft/utils/save_and_load.py:313: UserWarning: Could not find a config file in Qwen/Qwen2.5-0.5B-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': '1.089', 'grad_norm': '11.31', 'learning_rate': '0.0002', 'entropy': '0.7351', 'mean_token_accuracy': '0.7376', 'num_tokens': '974', 'epoch': '1'}
+{'loss': '0.8538', 'grad_norm': '5.097', 'learning_rate': '0.0001', 'entropy': '0.7892', 'mean_token_accuracy': '0.7442', 'num_tokens': '1948', 'epoch': '2'}
+{'eval_loss': '1.163', 'eval_runtime': '0.3731', 'eval_samples_per_second': '10.72', 'eval_steps_per_second': '10.72', 'eval_entropy': '0.9828', 'eval_mean_token_accuracy': '0.6375', 'eval_num_tokens': '1948', 'epoch': '2'}
+{'train_runtime': '5.553', 'train_samples_per_second': '2.882', 'train_steps_per_second': '0.36', 'train_loss': '0.9712', 'epoch': '2'}
+{'eval_loss': '1.163', 'eval_runtime': '0.293', 'eval_samples_per_second': '13.65', 'eval_steps_per_second': '13.65', 'eval_entropy': '0.9828', 'eval_mean_token_accuracy': '0.6375', 'eval_num_tokens': '1948', 'epoch': '2'}

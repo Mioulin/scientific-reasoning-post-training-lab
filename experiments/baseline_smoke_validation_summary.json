@@ -1,0 +1,54 @@
+{
+  "status": "COMPLETED",
+  "model": {
+    "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "license": "Apache-2.0",
+    "cache_dir": ".cache/huggingface"
+  },
+  "adapter": null,
+  "split": "validation",
+  "limit": 4,
+  "seed": 42,
+  "generation": {
+    "max_new_tokens": 48,
+    "do_sample": false
+  },
+  "hardware": {
+    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.12.13",
+    "machine": "arm64",
+    "mps_available": true,
+    "cuda_available": false,
+    "packages": {
+      "torch": "2.15.0",
+      "transformers": "5.22.2",
+      "trl": "1.17.1",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "elapsed_seconds": 2.903374499990605,
+  "memory": {
+    "process_max_rss_bytes": 2147270656,
+    "mps_allocated_bytes": 2013555712,
+    "note": "RSS is process high-water mark; MPS value is current allocation, not peak."
+  },
+  "metrics": {
+    "n": 4,
+    "accuracy": 0.0,
+    "format_valid_rate": 0.0,
+    "numeric_accuracy": 0.0,
+    "numeric_mae_parseable_only": null,
+    "numeric_parseable_n": 0,
+    "numeric_n": 4,
+    "abstention_precision": null,
+    "abstention_recall": null,
+    "unsupported_assertion_rate": null,
+    "by_family": {
+      "rate": 0.0
+    }
+  }
+}

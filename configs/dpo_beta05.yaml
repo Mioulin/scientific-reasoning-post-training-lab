@@ -1,0 +1,7 @@
+name: dpo_beta05
+seed: 42
+epochs: 1
+learning_rate: 0.00005
+gradient_accumulation_steps: 8
+beta: 0.5
+sft_checkpoint: checkpoints/sft/final

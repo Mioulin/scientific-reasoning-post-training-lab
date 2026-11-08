@@ -1,0 +1,12 @@
+.venv/
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+data/
+checkpoints/
+*.safetensors
+*.bin
+.env*
+.DS_Store
