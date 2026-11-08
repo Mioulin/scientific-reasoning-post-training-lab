@@ -47,7 +47,7 @@ def test_sft_masks_prompt_and_updates_adapter(tmp_path):
         bf16=False,
         fp16=False,
         max_steps=1,
-        per_device_train_batch_size=1,
+        per_device_train_batch_size=2,
         gradient_accumulation_steps=1,
         learning_rate=0.01,
         report_to="none",
@@ -61,11 +61,18 @@ def test_sft_masks_prompt_and_updates_adapter(tmp_path):
         model=model,
         processing_class=tok,
         args=args,
-        train_dataset=Dataset.from_list([{"prompt": "Question ", "completion": "right [EOS]"}]),
+        train_dataset=Dataset.from_list(
+            [
+                {"prompt": "Question ", "completion": "right [EOS]"},
+                {"prompt": "Question Question ", "completion": "right right [EOS]"},
+            ]
+        ),
     )
     batch = next(iter(trainer.get_train_dataloader()))
     assert batch["labels"][0, 0] == -100
     assert 4 in batch["labels"]
+    assert (batch["attention_mask"] == 0).any()
+    assert (batch["labels"][batch["attention_mask"] == 0] == -100).all()
     before = {n: p.detach().clone() for n, p in model.named_parameters() if p.requires_grad}
     frozen = {n: p.detach().clone() for n, p in model.named_parameters() if not p.requires_grad}
     trainer.train()

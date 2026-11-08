@@ -60,7 +60,8 @@ def load(adapter=None, reward=False):
 
 def memory():
     return {
-        "process_max_rss_bytes": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+        "process_max_rss_bytes": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        * (1024 if platform.system() == "Linux" else 1),
         "mps_allocated_bytes": torch.mps.current_allocated_memory()
         if torch.backends.mps.is_available()
         else None,

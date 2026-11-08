@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "supported_n": 6,
+    "unsupported_n": 30,
+    "supported_claim_recall": 0.0,
+    "unsupported_claim_correct_rate": 0.2,
+    "claim_balanced_accuracy": 0.1,
+    "status": "Post-hoc class-balance diagnostic, not a new primary endpoint"
+  },
+  "sft": {
+    "supported_n": 6,
+    "unsupported_n": 30,
+    "supported_claim_recall": 0.0,
+    "unsupported_claim_correct_rate": 0.7,
+    "claim_balanced_accuracy": 0.35,
+    "status": "Post-hoc class-balance diagnostic, not a new primary endpoint"
+  },
+  "dpo": {
+    "supported_n": 6,
+    "unsupported_n": 30,
+    "supported_claim_recall": 0.0,
+    "unsupported_claim_correct_rate": 1.0,
+    "claim_balanced_accuracy": 0.5,
+    "status": "Post-hoc class-balance diagnostic, not a new primary endpoint"
+  }
+}

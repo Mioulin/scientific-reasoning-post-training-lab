@@ -1,0 +1,26 @@
+{
+  "train": {
+    "pairs": 288,
+    "max_sequence_tokens": 2,
+    "min_sequence_tokens": 2,
+    "truncated": 0
+  },
+  "validation": {
+    "pairs": 48,
+    "max_sequence_tokens": 2,
+    "min_sequence_tokens": 2,
+    "truncated": 0
+  },
+  "test": {
+    "pairs": 120,
+    "max_sequence_tokens": 2,
+    "min_sequence_tokens": 2,
+    "truncated": 0
+  },
+  "final": {
+    "pairs": 120,
+    "max_sequence_tokens": 2,
+    "min_sequence_tokens": 2,
+    "truncated": 0
+  }
+}

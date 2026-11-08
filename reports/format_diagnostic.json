@@ -7,10 +7,10 @@
     "status": "Post-hoc format sensitivity diagnostic; not the preregistered primary endpoint."
   },
   "sft_test": {
-    "numeric_n": 36,
-    "parseable_numeric_or_string": 22,
+    "numeric_n": 60,
+    "parseable_numeric_or_string": 46,
     "correct_after_numeric_string_conversion": 4,
-    "accuracy": 0.1111111111111111,
+    "accuracy": 0.06666666666666667,
     "status": "Post-hoc format sensitivity diagnostic; not the preregistered primary endpoint."
   }
 }
