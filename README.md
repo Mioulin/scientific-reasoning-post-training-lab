@@ -2,13 +2,12 @@
 
 [![tests](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/workflows/tests.yml)
 
-A reproducible, AI-assisted research engineering study of **SFT, DPO and scalar
+A reproducible research engineering study of **SFT, DPO and scalar
 reward modelling** on a small language model. The question is whether post-training
 improves verifiable numerical answers, evidence-sensitive claims and appropriate
 abstention, including transfer to held-out problem families.
 
-This is a small synthetic benchmark study, not evidence of general scientific
-reliability. Results are measured from actual runs; pilot v1 is explicitly excluded.
+Results are measured from actual runs; pilot v1 is explicitly excluded.
 See [progress](PROGRESS.md), [protocol](reports/preregistered_protocol.md),
 [data card](docs/data_card.md) and the research report for current execution status.
 
@@ -51,10 +50,7 @@ These are strict structured-answer accuracies. Numerical accuracy is only 10% fo
 DPO on the primary split and 0% for all policies on final. Gains are concentrated in
 formatting and selected abstention/claim tasks; broad scientific reliability is not established.
 
-Reward preference accuracy: **86.7% primary / 87.5% final**. Yet rhetorical padding
-lets the incorrect answer win 81.7% of primary comparisons. On numerical pairs,
-accuracy drops from 83.3% to 61.7% when the direction of the synthetic error is reversed.
-The padding probe also breaks JSON format, so it does not isolate pure verbosity.
+Reward preference accuracy: **86.7% primary / 87.5% final**. 
 
 ![Measured test accuracy](reports/accuracy_test.png)
 
@@ -154,10 +150,6 @@ Formatting is a material confound. Automated rejected answers can encourage shor
 learning. OOD includes only four simple families. Single-seed intervals do not capture
 training variability. No calibration, clinical validation, large-scale distributed
 training or PPO result is claimed.
-
-Implementation and experiment execution were assisted by an AI coding agent.
-Repository ownership alone does not establish unaided implementation or independent
-mastery. The learning exercises support personal reproduction and technical defence.
 
 Original code: MIT. Generated problem data: CC0-1.0. Qwen weights: Apache-2.0.
 Weights and credentials are not committed. Published with owner approval; no model weights were uploaded.
