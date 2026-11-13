@@ -14,7 +14,6 @@ Pilot v1 is preserved in experiments/pilot_v1 and excluded from primary comparis
 | Comparative report and figures | COMPLETED | reports/research_report.md; figures checked visually |
 | Local tests | COMPLETED | 10 passed; Ruff passes; uv sync --offline --locked succeeds |
 | Artifact verification | COMPLETED | 8 policy evaluations, 2 reward evaluations, 4 adapter hashes checked |
-| Russian learning/interview guides | COMPLETED | docs/learning_guide_ru.md; docs/interview_defence_ru.md |
 | PPO | NOT RUN | No PPO implementation in pinned TRL tree; online reward not sufficiently validated |
 | GitHub publication | COMPLETED | Public repository and research commit verified; reports/publication.json |
 | Remote CI | COMPLETED | Linux workflow 42472058525 passed, including tests and Ruff |

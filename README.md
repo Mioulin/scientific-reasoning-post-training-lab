@@ -32,7 +32,6 @@ shows limited transfer and worse mean DPO performance than SFT; it must not be
 combined with the older 120-example results below.
 
 See [extension report](reports/toolstudy/research_report.md),
-[Russian explanation](docs/verified_computation_ru.md),
 [raw-result verification](reports/toolstudy/verification.json) and
 [seed variation](reports/toolstudy/seed_summary.json).
 
@@ -150,8 +149,6 @@ presentation sensitivity and changed numerical error direction.
 - `experiments/`: real per-example outputs, setup metadata and logs.
 - `reports/`: measured comparisons, figures, research report and verification.
 - `tests/`: data, metrics and tiny CPU training integration; no model downloads.
-- [Russian learning guide](docs/learning_guide_ru.md).
-- [Interview defence](docs/interview_defence_ru.md).
 
 ## Limitations and attribution
 

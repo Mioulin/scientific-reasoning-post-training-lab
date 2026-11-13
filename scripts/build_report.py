@@ -221,7 +221,7 @@ report.append(
     "all evaluations. `artifact_verification.json` checks predictions, metrics and weight hashes. "
     "Plots are derived from the same saved rows. GitHub Actions is configured; see reports/publication.json for verified remote CI evidence "
     "when available. This public consulting prototype uses synthetic tasks; interpretation requires "
-    "independent reproduction. See the Russian learning and interview guides."
+    "independent reproduction. See the methodology and limitations in this report."
 )
 report.append(
     "\nReferences: [TRL](https://huggingface.co/docs/trl/index), "
@@ -248,41 +248,4 @@ Use these bullets to describe the public demonstrator; do not attribute its synt
 
 Do not claim PPO, large-scale RLHF, unaided authorship, or general scientific reliability.
 """)
-# Add measured experiment cards to the Russian guide without duplicating them on rerun.
-p = Path("docs/learning_guide_ru.md")
-s = p.read_text().split("\n## 9. Карточки выполненных экспериментов")[0]
-s += "\n## 9. Карточки выполненных экспериментов\n"
-for n in names:
-    s += f"\n### {n}\n\n"
-    s += "1. Вопрос: как фиксированная policy отвечает на одинаковые проверяемые задачи?\n"
-    objective = (
-        "без дополнительного обучения"
-        if n == "baseline"
-        else ("completion cross-entropy" if n == "sft" else "DPO logistic loss относительно SFT reference")
-    )
-    s += f"2. Модель: Qwen2.5-0.5B-Instruct; objective: {objective}.\n"
-    s += "3. Код: `runtime.py`, `metrics.py`; обучение — `training.py`, настройки — `configs/`.\n"
-    s += (
-        "4. Процедура: greedy inference на 120 test и 120 final задачах.\n"
-        if n == "baseline"
-        else f"4. Процедура: LoRA, {2 if n == 'sft' else 1} эпохи, batch accumulation 8, seed 42, reload checkpoint.\n"
-    )
-    s += f"5. Наблюдение: test accuracy {metrics[n]['accuracy']:.1%}, final {final[n]['accuracy']:.1%}; numerical test accuracy {metrics[n]['numeric_accuracy']:.1%}.\n"
-    s += "6. Что сработало/не сработало: выполненный pipeline даёт проверяемые ответы и сохраняет ошибки; конкретные успехи и регрессии приведены в research report.\n"
-    s += "7. Ограничение: маленькие искусственные семейства, один seed; aggregate score смешивает формат и корректность.\n"
-    s += "8. Упражнение: вручную проверьте по одному успеху и провалу и объясните связь с objective.\n"
-s += f"""\n### Reward model
-
-1. Вопрос: переносится ли предпочтение правильного ответа на новые семейства и поверхностные изменения?
-2. Модель: Qwen backbone + scalar head + LoRA; pairwise logistic loss.
-3. Код: `training.py`, `reward_evaluation.py`, `configs/reward.yaml`.
-4. Процедура: две эпохи на 288 автоматически размеченных парах, validation, reload, test/final.
-5. Результат: test {reward["accuracy"]:.1%}, final {reward_final["accuracy"]:.1%}; противоположный знак числовой ошибки {reward["opposite_numeric_error_accuracy"]:.1%}.
-6. Проверки многословия и форматирования выполнены; margin и провалы сохранены, устойчивость к активному reward hacking не доказана.
-7. Ограничение: простые synthetic rejected и узкий набор adversarial probes.
-8. Упражнение: найдите пару с отрицательным margin и предложите исправление данных без доступа к final labels при подборе модели.
-"""
-p.write_text(s)
-print(
-    "Research report, results summary, CV draft and Russian experiment cards generated from measured artefacts."
-)
+print("Public research report and results summary generated from measured artefacts.")

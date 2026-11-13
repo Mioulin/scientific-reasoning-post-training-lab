@@ -13,3 +13,11 @@ checkpoints/
 *.egg-info/
 build/
 dist/
+
+# Local personal learning and interview material
+docs/*_ru.md
+docs/*interview*
+
+# Local personal learning and interview material
+docs/*_ru.md
+docs/*interview*
