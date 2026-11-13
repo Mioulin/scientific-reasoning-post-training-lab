@@ -1,5 +1,15 @@
 # Scientific Reasoning Post-Training Lab
 
+## Public consulting demonstrator
+
+This repository is a public prototype illustrating the approach for my confidential internal consulting projects. It is intended to demonstrate methodology, engineering practice and evaluation discipline. It is not a release of a client implementation.
+
+**Demonstrated approach:** Comparing adaptation objectives, verifiable evaluation and failure analysis before recommending a model-training approach.
+
+All reported measurements belong to the public synthetic experiments in this repository. They are not client results, production performance or evidence of deployment. Client identities, data, requirements, proprietary code and commercial outcomes are not disclosed. The prototype preserves its measured failures and limitations so that the approach can be reviewed independently.
+
+See [consulting context and scope](docs/consulting_context.md).
+
 [![tests](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/Mioulin/scientific-reasoning-post-training-lab/actions/workflows/tests.yml)
 
 A reproducible research engineering study of **SFT, DPO and scalar

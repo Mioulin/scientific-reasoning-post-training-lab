@@ -1,9 +1,9 @@
 # Техническая защита проекта
 
 Числа и статусы берите из research report и сохранённых experiment JSON. Репозиторий
-создан при помощи AI-агента; «самостоятельно реализовала» нельзя подменять наличием
-сгенерированного кода. Честная формулировка — провела и проверила AI-assisted проект,
-если вы действительно воспроизвели команды, проверили результаты и понимаете код.
+представляет публичный демонстрационный прототип подхода для конфиденциальных
+консалтинговых проектов. Публичные эксперименты используют синтетические задачи;
+результаты клиентских работ здесь не раскрываются и не заявляются.
 
 ## Why did you choose DPO rather than PPO?
 
@@ -129,9 +129,9 @@ and reward-hacking probes. Eight GPUs do not remove data-quality limitations.”
 
 ## What did you personally implement and verify?
 
-**Short:** “This is an AI-assisted research engineering project. The repository records
-what was executed; I distinguish that from the parts I have independently reproduced
-and can explain.”
+**Short:** “This is a public demonstrator of the approach for my confidential consulting projects.
+The repository records synthetic experiments and their limitations, not client-specific
+data, implementation details or business outcomes.”
 
 **Detailed:** “Executed evidence includes procedural data, baseline inference, LoRA
 training through maintained trainers, checkpoint reloads, deterministic grading,
@@ -146,5 +146,5 @@ a run and explaining a failure. I would not claim unaided implementation of TRL 
 ## CV bullets
 
 Финальные, подтверждённые числа и формулировки находятся в `reports/cv_bullets.md`.
-Используйте их лишь после личной проверки; не удаляйте оговорку об AI-assisted работе,
-если иначе создаётся впечатление самостоятельной реализации всей инфраструктуры.
+Описывайте ими публичный прототип и проверенные эксперименты; не переносите
+синтетические метрики на конфиденциальные клиентские проекты.

@@ -220,7 +220,7 @@ report.append(
     "updates, frozen DPO reference and checkpoint resume. Saved full-size adapters were reloaded for "
     "all evaluations. `artifact_verification.json` checks predictions, metrics and weight hashes. "
     "Plots are derived from the same saved rows. GitHub Actions is configured; see reports/publication.json for verified remote CI evidence "
-    "when available. Code and experiment execution are AI-assisted; personal mastery requires "
+    "when available. This public consulting prototype uses synthetic tasks; interpretation requires "
     "independent reproduction. See the Russian learning and interview guides."
 )
 report.append(
@@ -240,9 +240,9 @@ Path("reports/results_summary.md").write_text(
 )
 Path("reports/cv_bullets.md").write_text(f"""# Evidence-based CV draft
 
-Use after personally reproducing and defending the work; implementation was AI-assisted.
+Use these bullets to describe the public demonstrator; do not attribute its synthetic results to client engagements.
 
-- Built and executed an AI-assisted, reproducible post-training study using PyTorch, Hugging Face TRL and LoRA, training SFT, DPO and a scalar reward model on a 0.5B-parameter language model with Apple Silicon.
+- Built and executed a reproducible post-training demonstration using PyTorch, Hugging Face TRL and LoRA, training SFT, DPO and a scalar reward model on a 0.5B-parameter language model with Apple Silicon.
 - Developed a programmatically verified synthetic scientific benchmark with family-held-out evaluation, leakage checks, deterministic grading and paired confidence intervals; compared four policies across two 120-example evaluation splits.
 - Investigated reward-model generalisation and superficial-feature sensitivity, reporting {reward["accuracy"]:.1%} held-out pairwise accuracy alongside counterexamples and numerical-error-direction probes; implemented CPU integration tests for masking, frozen references and checkpoint recovery.
 
